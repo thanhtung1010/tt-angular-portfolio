@@ -1,2 +1,20 @@
-<router-outlet />
-<app-lottie-animation></app-lottie-animation>
+<section class="main-section">
+    <header class="tfe-header-wrapper"></header>
+    <main class="tfe-main-wrapper"></main>
+    <footer class="tfe-footer-wrapper"></footer>
+</section>
+
+<nav> nav</nav>
+@if (loading()) {
+    <div
+        class="tfe-bg-cat-loading"
+        animate.leave="tfe-leave-fade"
+        animate.enter="tfe-enter-fade"
+    ></div>
+    <lottie-animation
+        class="tfe-cat-loading"
+        [config]="lottie()"
+        animate.leave="tfe-leave-slide-y"
+        animate.enter="tfe-enter-slide-y"
+    ></lottie-animation>
+}

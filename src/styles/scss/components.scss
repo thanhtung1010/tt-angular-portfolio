@@ -1,0 +1,70 @@
+@use "variable" as var;
+@reference "tailwindcss";
+
+@layer components {
+    .#{var.$primary-prefix-cls} {
+
+        &-footer {
+            @apply flex gap-4 items-start justify-between py-4 px-6;
+
+            &-wrapper {
+                @apply border-t border-white;
+            }
+
+            // &-logo {
+            //     @apply h-10;
+            // }
+
+            &-contact {
+                @apply flex flex-col gap-4;
+            }
+
+            &-connect {
+                @apply flex flex-col gap-4;
+            }
+        }
+
+        &-header {
+            @apply flex gap-4 items-start justify-between py-4 px-6;
+
+            &-wrapper {
+                @apply border-t border-white;
+            }
+
+            // &-logo {
+            //     @apply h-10;
+            // }
+
+            &-contact {
+                @apply flex flex-col gap-4;
+            }
+
+            &-connect {
+                @apply flex flex-col gap-4;
+            }
+        }
+
+        &-main {
+
+            &-wrapper {
+                @apply h-screen;
+            }
+        }
+
+        &-wrapper {
+            @apply w-full;
+        }
+
+        &-container {
+            @apply w-full max-w-7xl m-auto;
+        }
+
+        &-cat-loading {
+            @apply absolute bottom-0 left-1/2 -translate-x-1/2 opacity-100;
+        }
+
+        &-bg-cat-loading {
+            @apply absolute bottom-0 left-0 w-full h-full backdrop-blur-md;
+        }
+    }
+}

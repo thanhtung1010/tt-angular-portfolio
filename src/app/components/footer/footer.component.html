@@ -1,0 +1,30 @@
+<section class="tfe-wrapper">
+    <section class="tfe-container tfe-footer">
+        <section class="tfe-footer-logo">
+            <img class="h-full max-h-20" [src]="svgLogo()" alt="logo-full.svg">
+        </section>
+
+        <section class="tfe-footer-contact">
+            <h6 class="text-2xl!">Contact</h6>
+
+            <main class="flex flex-col gap-2">
+                <p>trinhthanhtung1010@gmail.com</p>
+                <p>+84836450670</p>
+            </main>
+        </section>
+
+        <section class="tfe-footer-connect">
+            <h6 class="text-2xl!">Let's be internet BFFs</h6>
+
+            <figure class="flex flex-row">
+                @for (item of socialNetworks(); track $index) {
+                    <url-layout [href]="item.href || ''" [target]="item.target || '_blank'">
+                        <ng-container hrefContent>
+                            <img loading="lazy" [src]="item.src" [alt]="item.name">
+                        </ng-container>
+                    </url-layout>
+                }
+            </figure>
+        </section>
+    </section>
+</section>

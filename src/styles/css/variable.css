@@ -1,7 +1,12 @@
 :root {
-    /* --primary-prefix-cls: "tt"; */
-    --primary-scroll-bar-color: #8ce6c8;
-    --primary-scroll-bar-hover-color: #17e9a3;
+    --bg-dark-color: #000;
+    --bg-light-color: #E8E8E8;
+
+    --text-dark-color: #E8E8E8;
+    --text-light-color: #3C3B3B;
+
+    --primary-scroll-bar-color: #c4c4c4;
+    --primary-scroll-bar-hover-color: #c4c4c4;
 
     --primary-font-size: 12px;
     --primary-font-weight: 400;
