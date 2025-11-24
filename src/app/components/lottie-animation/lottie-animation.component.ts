@@ -1,6 +1,7 @@
 import { isPlatformBrowser } from '@angular/common';
 import {
     Component,
+    inject,
     Inject,
     Input,
     OnChanges,
@@ -11,6 +12,7 @@ import {
     WritableSignal,
 } from '@angular/core';
 import { Config, DotLottie } from '@lottiefiles/dotlottie-web';
+import { LayoutService } from '../../services/layout.service';
 
 @Component({
     selector: 'lottie-animation',
@@ -41,6 +43,7 @@ export class LottieAnimationComponent implements OnInit, OnChanges {
     }
     private _height: WritableSignal<string> = signal('300');
 
+    private readonly _layoutService = inject(LayoutService);
     private _dotLottie: WritableSignal<DotLottie | null> = signal(null);
     private _canvas: WritableSignal<HTMLCanvasElement | null> = signal(null);;
     private _config: WritableSignal<Omit<Config, 'canvas'>> = signal({});;
@@ -50,11 +53,8 @@ export class LottieAnimationComponent implements OnInit, OnChanges {
         autoplay: true,
         loop: true,
     };
-    protected isBrowser = signal<boolean>(false);
 
-    constructor(@Inject(PLATFORM_ID) private platformId: Object) {
-        this.isBrowser.set(isPlatformBrowser(this.platformId))
-    }
+    constructor() {}
 
     ngOnInit() {
         this.loadLottie();
@@ -67,7 +67,7 @@ export class LottieAnimationComponent implements OnInit, OnChanges {
     }
 
     initLottie() {
-        if (this.isBrowser()) {
+        if (this._layoutService.isBrowser()) {
             const canvas = document?.getElementById('dotlottie-canvas') as HTMLCanvasElement | null;
             if (canvas) {
                 this._canvas.set(canvas);

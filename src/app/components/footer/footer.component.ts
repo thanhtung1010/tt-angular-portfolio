@@ -2,17 +2,18 @@ import { Component, inject, OnInit, signal, WritableSignal } from '@angular/core
 import { ISocialNetwork } from '../../interfaces/common.interface';
 import { URLLayoutComponent } from '../url-layout/url-layout.component';
 import { Location } from '@angular/common';
+import { SvgLoaderComponent } from '../svg-loader/svg-loader.component';
 
 @Component({
     selector: 'footer',
     templateUrl: './footer.component.html',
-    imports: [URLLayoutComponent],
+    imports: [URLLayoutComponent, SvgLoaderComponent],
 })
 export class FooterComponent implements OnInit {
 
     private _location = inject(Location);
     protected host = signal(this._location.path);
-    protected readonly svgLogo = signal('/assets/svg/logo-full.svg');
+    protected readonly svgLogo = signal('/assets/svg/logo.svg');
     protected readonly socialNetworks: WritableSignal<ISocialNetwork[]> = signal([
         {
             name: 'facebook-logo.svg',

@@ -1,4 +1,5 @@
-import { Injectable, signal, WritableSignal } from "@angular/core";
+import { isPlatformBrowser } from "@angular/common";
+import { Inject, Injectable, PLATFORM_ID, signal, WritableSignal } from "@angular/core";
 import { BehaviorSubject } from "rxjs";
 
 @Injectable({
@@ -18,5 +19,32 @@ export class LayoutService {
     }
     private readonly _loading$: BehaviorSubject<WritableSignal<boolean>> = new BehaviorSubject(signal(true));
 
-    constructor() {}
+    get isBrowser(): WritableSignal<boolean> {
+        return this._isBrowser;
+    }
+    set isBrowser(value: boolean) {
+        if (value !== this._isBrowser()) {
+            this._isBrowser.set(value);
+        }
+    }
+    private _isBrowser = signal<boolean>(false);
+
+    private readonly _hiddenClass: string = 'tfe-hidden-scroll';
+
+    constructor(@Inject(PLATFORM_ID) private platformId: Object) {
+        this.isBrowser.set(isPlatformBrowser(this.platformId))
+    }
+
+    toggleScroll(selector: string) {
+        const elm = document.querySelector(selector);
+        if (elm) {
+            const cls = elm.className;
+            console.log(cls)
+            if (cls.includes(this._hiddenClass)) {
+                elm.className = cls.replace(this._hiddenClass, '');
+            } else {
+                elm.className = [cls, this._hiddenClass].join(' ');
+            }
+        }
+    }
 }

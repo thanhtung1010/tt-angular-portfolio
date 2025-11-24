@@ -1,0 +1,13 @@
+@use "variable" as var;
+@reference "tailwindcss";
+
+@layer selectors {
+
+    app-root {
+        @apply h-full w-full overflow-auto block relative px-0 xl:px-24;
+    }
+
+    svg-loader {
+        @apply inline-block;
+    }
+}

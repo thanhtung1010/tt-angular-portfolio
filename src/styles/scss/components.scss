@@ -7,14 +7,6 @@
         &-footer {
             @apply flex gap-4 items-start justify-between py-4 px-6;
 
-            &-wrapper {
-                @apply border-t border-white;
-            }
-
-            // &-logo {
-            //     @apply h-10;
-            // }
-
             &-contact {
                 @apply flex flex-col gap-4;
             }
@@ -25,11 +17,7 @@
         }
 
         &-header {
-            @apply flex gap-4 items-start justify-between py-4 px-6;
-
-            &-wrapper {
-                @apply border-t border-white;
-            }
+            @apply flex gap-4 items-start justify-between py-4 px-6 absolute;
 
             // &-logo {
             //     @apply h-10;
@@ -45,18 +33,16 @@
         }
 
         &-main {
-
-            &-wrapper {
-                @apply h-screen;
-            }
+            @apply h-screen
         }
 
-        &-wrapper {
-            @apply w-full;
+        &-nav {
+            @apply absolute;
         }
 
         &-container {
-            @apply w-full max-w-7xl m-auto;
+            @apply w-full max-w-7xl mx-auto;
+            background-color: var(--bg-secondary-color);
         }
 
         &-cat-loading {
@@ -65,6 +51,10 @@
 
         &-bg-cat-loading {
             @apply absolute bottom-0 left-0 w-full h-full backdrop-blur-md;
+        }
+
+        &-hidden-scroll {
+            @apply overflow-hidden!;
         }
     }
 }

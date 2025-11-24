@@ -40,6 +40,10 @@ export class App implements AfterViewInit {
             .pipe(takeUntilDestroyed(this._destroyRef))
             .subscribe((resp) => {
                 this.loading.set(resp());
+
+                if (this._layoutService.isBrowser()) {
+                    this._layoutService.toggleScroll('app-root');
+                }
             });
 
         const _timeout = setTimeout(() => {
