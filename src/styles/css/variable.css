@@ -1,12 +1,12 @@
 :root {
-    --bg-primary-color: #F3E8DF;
-    --bg-secondary-color: #E8D1C5;
+    --bg-primary-color: #E8F9FF;
+    --bg-secondary-color: #FBFBFB;
 
-    --text-primary-color: #57595B;
+    --text-primary-color: #146C94;
     --text-secondary-color: #452829;
 
-    --primary-scroll-bar-color: #D2DCB6;
-    --primary-scroll-bar-hover-color: #778873;
+    --primary-scroll-bar-color: #91C8E4;
+    --primary-scroll-bar-hover-color: #4682A9;
 
     --primary-font-size: 12px;
     --primary-font-weight: 400;
