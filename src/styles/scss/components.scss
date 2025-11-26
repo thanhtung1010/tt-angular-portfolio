@@ -1,6 +1,17 @@
 @use "variable" as var;
 @reference "tailwindcss";
 
+
+#{self}_
+
+.a {
+    self: &
+}
+.b {
+    .a--active{
+
+    }
+}
 @layer components {
     .#{var.$primary-prefix-cls} {
 
@@ -17,18 +28,18 @@
         }
 
         &-header {
-            @apply flex gap-4 items-start justify-between py-4 px-6 absolute;
+            @apply rounded-full fixed top-10 left-1/2 -translate-x-1/2 overflow-hidden mx-4 w-full max-w-2xl;
 
-            // &-logo {
-            //     @apply h-10;
-            // }
-
-            &-contact {
-                @apply flex flex-col gap-4;
+            &-container {
+                @apply relative w-full h-full;
             }
 
-            &-connect {
-                @apply flex flex-col gap-4;
+            &-wrapper {
+                @apply relative w-full h-full py-4 px-6;
+            }
+
+            &-content {
+                @apply flex gap-4 items-center justify-between;
             }
         }
 
@@ -37,7 +48,7 @@
         }
 
         &-nav {
-            @apply absolute;
+            @apply absolute top-0 right-0 w-full h-full backdrop-blur-md;
         }
 
         &-container {
@@ -55,6 +66,22 @@
 
         &-hidden-scroll {
             @apply overflow-hidden!;
+        }
+
+        &-liquid {
+            @apply relative;
+
+            &-effect {
+                @apply absolute z-0 inset-0 backdrop-blur-[3px] filter-[url(#glass-distortion)] overflow-hidden isolate;
+            }
+
+            &-tint {
+                @apply z-10 absolute inset-0 bg-white/25;
+            }
+
+            &-shine {
+                @apply absolute inset-0 z-20 overflow-hidden shadow-[inset_2px_2px_1px_0_rgba(255,255,255,0.5),inset_-1px_-1px_1px_1px_rgba(255,255,255,0.5)];
+            }
         }
     }
 }

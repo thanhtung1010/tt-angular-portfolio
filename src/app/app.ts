@@ -32,6 +32,7 @@ export class App implements AfterViewInit {
         'https://lottie.host/9b524a98-c3d4-415f-b4f3-a79bf4c3d395/b1FArc0UlB.lottie'
     );
     protected loading: WritableSignal<boolean> = signal(true);
+    protected visibleNav: WritableSignal<boolean> = signal(false);
 
     constructor() {}
 
@@ -44,6 +45,12 @@ export class App implements AfterViewInit {
                 if (this._layoutService.isBrowser()) {
                     this._layoutService.toggleScroll('app-root');
                 }
+            });
+
+        this._layoutService.nav$
+            .pipe(takeUntilDestroyed(this._destroyRef))
+            .subscribe((resp) => {
+                this.visibleNav.set(resp());
             });
 
         const _timeout = setTimeout(() => {

@@ -19,6 +19,18 @@ export class LayoutService {
     }
     private readonly _loading$: BehaviorSubject<WritableSignal<boolean>> = new BehaviorSubject(signal(true));
 
+    get nav$(): BehaviorSubject<WritableSignal<boolean>> {
+        return this._nav$;
+    }
+    set nav$(nav: boolean) {
+        if (nav !== this._nav$.value()) {
+            const value = this._nav$.value;
+            value.set(nav);
+            this._nav$.next(value);
+        }
+    }
+    private readonly _nav$: BehaviorSubject<WritableSignal<boolean>> = new BehaviorSubject(signal(false));
+
     get isBrowser(): WritableSignal<boolean> {
         return this._isBrowser;
     }
@@ -46,5 +58,10 @@ export class LayoutService {
                 elm.className = [cls, this._hiddenClass].join(' ');
             }
         }
+    }
+
+    toggleNav() {
+        const nav = !this.nav$.value();
+        this.nav$.next(signal(nav));
     }
 }
