@@ -62,6 +62,7 @@ export class LayoutService {
 
     toggleNav() {
         const nav = !this.nav$.value();
+        this.toggleScroll('app-root');
         this.nav$.next(signal(nav));
     }
 }
