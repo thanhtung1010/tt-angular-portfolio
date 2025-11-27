@@ -1,4 +1,4 @@
-<svg-loader class="my-auto" [src]="svgLogo()" size="100"></svg-loader>
+<!-- <svg-loader class="my-auto" [src]="svgLogo()" size="100"></svg-loader>
 
 <section class="tfe-footer-contact">
     <h6 class="text-2xl! font-semibold!">Contact</h6>
@@ -21,4 +21,28 @@
             </url-layout>
         }
     </figure>
+</section> -->
+
+<section class="tfe-footer-wrapper">
+    <section class="tfe-footer-center">
+        <h5 class="text-3xl! font-semibold flex items-center justify-between">
+            <svg-loader class="my-auto" [src]="svgLogo()" size="100"></svg-loader>
+            <span>
+                Hi! Thanks for stopping by.
+            </span>
+        </h5>
+
+        <section class="px-12 py-5 rounded-4xl bg-(--bg-secondary-color) flex items-center justify-between gap-4">
+            <p>Interested in working together? Let's schedule a time to chat. I’ll buy the coffee.</p>
+            <url-layout class="flex items-center justify-between border border-blue-700" [href]="mailToHref()" target="_self">
+                <ng-container hrefContent>
+                    <svg-loader class="text-white" [src]="svgChat()"></svg-loader>
+                    <p>Say hi to me</p>
+                </ng-container>
+            </url-layout>
+        </section>
+    </section>
+    <section class="tfe-footer-version">
+        <span> © 2025, designed & coded by me </span>
+    </section>
 </section>

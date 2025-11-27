@@ -16,15 +16,27 @@
     .#{var.$primary-prefix-cls} {
 
         &-footer {
-            @apply flex gap-4 items-start justify-between py-4 px-6;
+            @apply flex gap-4 items-start justify-between py-4 px-6 lg:px-10 lg:py-8 border-t border-white bg-(--bg-primary-color);
 
-            &-contact {
-                @apply flex flex-col gap-4;
+            &-wrapper {
+                @apply max-w-[160rem];
             }
 
-            &-connect {
-                @apply flex flex-col gap-4;
+            &-content {
+                @apply max-w-7xl p-4 md:p-10;
             }
+
+            &-version {
+                @apply max-w-7xl border-t border-blue-700 pt-3 md:p-10 text-center;
+            }
+
+            // &-contact {
+            //     @apply flex flex-col gap-4;
+            // }
+
+            // &-connect {
+            //     @apply flex flex-col gap-4;
+            // }
         }
 
         &-header {
@@ -51,17 +63,12 @@
             @apply fixed w-full h-full backdrop-blur-md;
         }
 
-        &-container {
-            @apply w-full max-w-7xl mx-auto;
-            background-color: var(--bg-primary-color);
-        }
-
         &-cat-loading {
-            @apply absolute bottom-0 left-1/2 -translate-x-1/2 opacity-100;
+            @apply fixed bottom-0 left-1/2 -translate-x-1/2;
         }
 
         &-bg-cat-loading {
-            @apply absolute bottom-0 left-0 w-full h-full backdrop-blur-md;
+            @apply fixed bottom-0 left-0 w-full h-full backdrop-blur-md;
         }
 
         &-hidden-scroll {

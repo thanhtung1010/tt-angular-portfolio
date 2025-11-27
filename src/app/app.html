@@ -7,11 +7,8 @@
 }
 
 <header class="tfe-header"></header>
-
-<section class="tfe-container">
-    <main class="tfe-main"></main>
-    <footer class="tfe-footer"></footer>
-</section>
+<main class="tfe-main"></main>
+<footer class="tfe-footer"></footer>
 
 @if (loading()) {
     <div
@@ -22,7 +19,7 @@
     <lottie-animation
         class="tfe-cat-loading"
         [config]="lottie()"
-        animate.leave="tfe-leave-slide-y"
-        animate.enter="tfe-enter-slide-y"
+        animate.leave="tfe-leave-slide-y tfe-leave-fade"
+        animate.enter="tfe-enter-slide-fade-y"
     ></lottie-animation>
 }

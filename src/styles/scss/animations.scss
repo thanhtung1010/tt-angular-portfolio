@@ -4,47 +4,92 @@
 .#{var.$primary-prefix-cls} {
 
     &-leave-slide-y {
-        @apply opacity-0 translate-y-full transition-all ease-out duration-500;
+        @apply transition-all ease-out duration-500 translate-y-full;
     }
 
     &-enter-slide-y {
-        @apply  animate-[enter-slide-y_500ms];
+        @apply animate-[enter-slide-y_500ms_ease-out_forwards];
+    }
+
+    &-enter-slide-fade-y {
+        @apply animate-[enter-slide-fade-y_500ms_ease-out_forwards];
+    }
+
+    &-leave-slide-x {
+        @apply transition-all ease-out duration-500 translate-x-full;
+    }
+
+    &-leave-slide-x- {
+        @apply transition-all ease-out duration-500 -translate-x-full;
+    }
+
+    &-enter-slide-x {
+        @apply animate-[enter-slide-x_500ms_ease-out_forwards];
+    }
+
+    &-enter-slide-fade-x {
+        @apply animate-[enter-slide-fade-x_500ms_ease-out_forwards];
     }
 
     &-leave-fade {
-        @apply  animate-[leave-fade_500ms];
+        @apply transition-all ease-out duration-500 opacity-0;
     }
 
     &-enter-fade {
-        @apply  animate-[enter-fade_500ms];
+        @apply animate-[enter-fade_500ms_ease-out_forwards];
     }
 }
 
-@keyframes enter-slide-y {
+@keyframes enter-fade {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes enter-slide-fade-y {
     from {
         opacity: 0;
         transform: translateY(100%);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
     }
 }
 
-@keyframes leave-fade {
+@keyframes enter-slide-fade-x {
     from {
         opacity: 0;
+        transform: translateX(100%);
     }
+
     to {
         opacity: 1;
+        transform: translateX(0);
     }
 }
 
-@keyframes enter-fade {
+@keyframes enter-slide-y {
     from {
-        opacity: 1;
+        transform: translateY(100%);
     }
+
     to {
-        opacity: 0;
+        transform: translateY(0);
+    }
+}
+
+@keyframes enter-slide-x {
+    from {
+        transform: translateX(100%);
+    }
+
+    to {
+        transform: translateX(0);
     }
 }

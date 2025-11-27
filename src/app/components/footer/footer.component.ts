@@ -13,6 +13,8 @@ export class FooterComponent implements OnInit {
 
     private _location = inject(Location);
     protected host = signal(this._location.path);
+    protected readonly mailToHref = signal('mailto:trinhthanhtung1010@gmail.com?Subject=Let%Connect&body=Hi!%20I%20saw%20you%20on%20your%20portfolio.');
+    protected readonly svgChat = signal('/assets/svg/chat.svg');
     protected readonly svgLogo = signal('/assets/svg/logo.svg');
     protected readonly socialNetworks: WritableSignal<ISocialNetwork[]> = signal([
         {
