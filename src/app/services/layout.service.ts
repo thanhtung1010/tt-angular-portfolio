@@ -53,7 +53,7 @@ export class LayoutService {
             const cls = elm.className;
             console.log(cls)
             if (cls.includes(this._hiddenClass)) {
-                elm.className = cls.replace(this._hiddenClass, '');
+                elm.className = cls.replace(this._hiddenClass, '').trim();
             } else {
                 elm.className = [cls, this._hiddenClass].join(' ');
             }

@@ -24,25 +24,25 @@
 </section> -->
 
 <section class="tfe-footer-wrapper">
-    <section class="tfe-footer-center">
-        <h5 class="text-3xl! font-semibold flex items-center justify-between">
-            <svg-loader class="my-auto" [src]="svgLogo()" size="100"></svg-loader>
-            <span>
+    <section class="tfe-footer-content">
+        <svg-loader [src]="svgLogo()" size="100"></svg-loader>
+        <main class="my-1">
+            <h5 class="text-2xl! font-semibold!">
                 Hi! Thanks for stopping by.
-            </span>
-        </h5>
+            </h5>
 
-        <section class="px-12 py-5 rounded-4xl bg-(--bg-secondary-color) flex items-center justify-between gap-4">
-            <p>Interested in working together? Let's schedule a time to chat. I’ll buy the coffee.</p>
-            <url-layout class="flex items-center justify-between border border-blue-700" [href]="mailToHref()" target="_self">
-                <ng-container hrefContent>
-                    <svg-loader class="text-white" [src]="svgChat()"></svg-loader>
-                    <p>Say hi to me</p>
-                </ng-container>
-            </url-layout>
-        </section>
+            <p class="text-lg!">
+                Interested in working together? Let's schedule a time to <url-layout class="text-nowrap" [href]="mailToHref()" target="_self">
+                    <ng-container hrefContent>
+                        <span class="text-xl! font-semibold! mr-1!">Chat</span>
+                        <svg-loader class="text-white" [src]="svgChat()"></svg-loader>
+                    </ng-container>
+                </url-layout>. I’ll buy the coffee.
+            </p>
+        </main>
     </section>
     <section class="tfe-footer-version">
+        <div class="tfe-footer-version_divider"></div>
         <span> © 2025, designed & coded by me </span>
     </section>
 </section>

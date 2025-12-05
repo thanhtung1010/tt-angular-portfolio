@@ -93,8 +93,14 @@ export class SvgLoaderComponent implements AfterViewInit, OnChanges {
         if (!svgEl) return;
 
         svgEl = this._svgSize(svgEl);
-        svgEl.setAttribute('stroke', this.color);
-        svgEl.setAttribute('fill', this.color);
+        const stroke = svgEl.getAttribute('stroke');
+        if (!stroke) {
+            svgEl.setAttribute('stroke', this.color);
+        }
+        const fill = svgEl.getAttribute('fill');
+        if (!fill) {
+            svgEl.setAttribute('fill', this.color);
+        }
 
         // Insert into container
         this._renderer.appendChild(this._elementRef.nativeElement, svgEl);
