@@ -1,5 +1,5 @@
 import { Directive, ElementRef, inject, OnInit } from "@angular/core";
-import { LayoutService } from "../services/layout.service";
+import { LayoutService } from "@services";
 
 @Directive({
     selector: '[liquid]'

@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { A_ELEMENT_TARGET } from '../../interfaces/common.interface';
+import { A_ELEMENT_TARGET } from '@interfaces';
 
 @Component({
     selector: 'url-layout',

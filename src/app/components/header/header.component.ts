@@ -1,8 +1,8 @@
 import { Component, DestroyRef, inject, OnInit, signal, ViewChild, WritableSignal } from '@angular/core';
 import { SvgLoaderComponent } from '../svg-loader/svg-loader.component';
 import { LottieAnimationComponent } from '../lottie-animation/lottie-animation.component';
-import { LiquidDirective } from '../../directives/liquid.directive';
-import { LayoutService } from '../../services/layout.service';
+import { LiquidDirective } from '@directives';
+import { LayoutService } from '@services';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { ILottieConfig } from '../../interfaces/common.interface';
 

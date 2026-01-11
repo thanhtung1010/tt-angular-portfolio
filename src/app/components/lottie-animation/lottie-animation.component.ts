@@ -16,7 +16,6 @@ import {
 } from '@angular/core';
 import {
     CompleteEvent,
-    Config,
     DestroyEvent,
     DotLottie,
     LoadErrorEvent,
@@ -24,16 +23,14 @@ import {
     PlayEvent,
     ReadyEvent,
     RenderErrorEvent,
-    RenderEvent,
+    RenderEvent
 } from '@lottiefiles/dotlottie-web';
-import { LayoutService } from '../../services/layout.service';
-import { ILottieConfig } from '../../interfaces/common.interface';
+import { ILottieConfig } from '@interfaces';
+import { LayoutService } from '@services';
 
 @Component({
     selector: 'lottie-animation',
     templateUrl: './lottie-animation.component.html',
-    imports: [
-    ]
 })
 export class LottieAnimationComponent implements OnInit, OnChanges, AfterViewInit, OnDestroy {
     @ViewChild('dotlottieCanvas') dotlottieCanvas!: ElementRef<HTMLCanvasElement>;

@@ -7,12 +7,14 @@ import {
     WritableSignal
 } from '@angular/core';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
-import { FooterComponent } from './components/footer/footer.component';
-import { HeaderComponent } from './components/header/header.component';
-import { LottieAnimationComponent } from './components/lottie-animation/lottie-animation.component';
-import { MainComponent } from './components/main/main.component';
-import { NavComponent } from './components/nav/nav.component';
-import { LayoutService } from './services/layout.service';
+import {
+    FooterComponent,
+    HeaderComponent,
+    LottieAnimationComponent,
+    MainComponent,
+    NavComponent,
+} from '@components';
+import { LayoutService } from '@services';
 
 @Component({
     selector: 'app-root',

@@ -2,17 +2,23 @@
 
 @layer global {
     .#{var.$primary-prefix-cls} {
-        scroll-behavior: smooth;
-        -webkit-overflow-scrolling: touch;
-        position: relative;
 
         &-theme-primary {
+            scroll-behavior: smooth;
+            -webkit-overflow-scrolling: touch;
+            position: relative;
             margin: unset;
             z-index: inherit;
             height: 100vh;
             width: 100vw;
             box-sizing: border-box;
             background-color: var(--bg-secondary-color);
+            transition: all .3s ease;
+            font-family: 'Metrophobic', 'KoHo', sans-serif;
+            font-size: var(--primary-font-size);
+            font-weight: var(--primary-font-weight);
+            color: var(--text-primary-color);
+            border-style: solid;
 
             p,
             span,
@@ -26,14 +32,6 @@
             }
 
             * {
-                transition: all .3s ease;
-                font-family: 'Metrophobic', 'KoHo', sans-serif;
-                box-sizing: border-box;
-                scroll-behavior: smooth;
-                font-size: var(--primary-font-size);
-                font-weight: var(--primary-font-weight);
-                color: var(--text-primary-color);
-                border-style: solid;
 
                 &::-webkit-scrollbar {
                     width: 4px;
