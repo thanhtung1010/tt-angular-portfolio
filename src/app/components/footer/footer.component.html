@@ -7,10 +7,11 @@
             </h5>
 
             <p class="text-lg!">
-                Interested in working together? Let's schedule a time to <url-layout class="text-nowrap" [href]="mailToHref()" target="_self">
+                Interested in working together? Let's schedule and send me an
+                <url-layout class="text-nowrap" [href]="mailToHref()" target="_self">
                     <ng-container hrefContent>
-                        <span class="text-xl! font-semibold! mr-1!">Chat</span>
-                        <svg-loader class="text-white" [src]="svgChat()"></svg-loader>
+                        <span class="text-xl! font-semibold! mr-1!">Email</span>
+                        <svg-loader [src]="svgChat()"></svg-loader>
                     </ng-container>
                 </url-layout>. I’ll buy the coffee.
             </p>
@@ -20,7 +21,4 @@
         <div class="tfe-footer-version_divider"></div>
         <span> © 2025, designed & coded by me </span>
     </section>
-</section>
-<section class="tfe-footer-version">
-    <span> © 2025, designed & coded by me </span>
 </section>
