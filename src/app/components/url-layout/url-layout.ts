@@ -3,7 +3,7 @@ import { A_ELEMENT_TARGET } from '@interfaces';
 
 @Component({
     selector: 'url-layout',
-    templateUrl: './url-layout.component.html',
+    templateUrl: './url-layout.html',
 })
 export class URLLayoutComponent implements OnInit {
     @Input() type: 'href' | 'download' = 'href';

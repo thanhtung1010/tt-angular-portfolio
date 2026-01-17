@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
     selector: 'section',
-    templateUrl: './section.component.html',
+    templateUrl: './section.html',
 })
 export class SectionComponent implements OnInit {
     constructor() {}

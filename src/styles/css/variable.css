@@ -1,76 +1,18 @@
 :root {
-    --bg-primary-color: #E8F9FF;
-    --bg-secondary-color: #EDF9FC;
+    --bg-color: #F5F5F5;
 
-    --text-primary-color: #146C94;
-    --text-secondary-color: #452829;
+    --text-color: rgba(0, 0, 0, 0.5);
+    --text-color-lighter: rgba(0, 0, 0, 0.3);
+    --text-dark-color: rgb(31, 34, 32);
+    
+    --border-color: rgba(0, 0, 0, 0.5);
 
-    --primary-scroll-bar-color: #91C8E4;
-    --primary-scroll-bar-hover-color: #4682A9;
+    --scroll-bar-color: rgba(0, 0, 0, 0.5);
+    --scroll-bar-hover-color: rgba(0, 0, 0, 1);
 
-    --primary-font-size: 12px;
-    --primary-font-weight: 400;
+    --font-size: 14px;
+    --font-weight: 400;
 
-    /* --main-color: #1a457b;
-    --white-color: #fff;
-    --black-color: #000;
-    --green-color: #5BE9B9;
-    --purple-color: #6E07F3;
-    --blue-color: #407BFF;
-    --light-blue-color: #AEC7FF;
-    --black-1f: #0000001f;
-    --black-14: #00000014;
-    --black-d: #0000000d;
-    --black-05: #383838;
-    --grey: #999999;
-
-    --xxx-lagger-font-size: 64px;
-    --xx-lagger-font-size: 48px;
-    --x-lagger-font-size: 32px;
-    --lagger-font-size: 24px;
-    --medium-font-size: 16px;
-    --small-font-size: 8px; */
-
-    /* shared component */
-    /* --header-height: 80px;
-    --page-content-padding: 20px;
-    --side-bar-width: 240px;
-    --header-position: 10;
-    --header-mid-vg-color: #eaeffb;
-    --header-left-icon-heigh-margin: 5px;
-    --header-left-icon-height: 30px;
-    --header-right-divider: #99b2c7;
-    --toggle-height: 40px;
-    --toggle-right: 10px;
-    --toggle-left: 10px;
-    --toggle-top: 10px;
-    --toggle-icon-width: 20px;
-    --header-avatar-height: 40px;
-    --header-noti-width: 350px;
-    --box-border-rad-1: 10px;
-    --header-height-mb: 60px;
-    --page-content-radius: 12px;
-    --header-right-icon-height: 20px;
-    --dc-icon-height: 40px;
-    --menu-line: #dde5f1;
-    --side-bar-logo-width: 140px;
-    --menu-item-padding: 8px;
-    --menu-item-height: 42px;
-    --menu-item-wrapper-padding: 8px;
-    --menu-item-icon-width: 25px;
-    --page-title-icon-width: 25px;
-    --box-border-color-1: #dce6ef;
-    --btn-yellow: #E0AF00;
-    --header-yellow: #fff9ed;
-    --header-light-blue: #f4f7fd;
-    --table-toggle-filter-height: 36px;
-    --list-item-2n: #fbfafa;
-    --normal-border: #d9d9d9;
-    --normal-color: #7e90aa;
-    --dc-icon-width: 30px; */
-
-    /* responsive */
-    /* --break-point-retina: 1367px;
-    --break-point-mb-min: 1025px;
-    --break-point-mb: 1024px; */
+    --text-sm: 12px;
+    --text-lg: 16px;
 }

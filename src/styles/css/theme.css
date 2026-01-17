@@ -1,6 +1,10 @@
 @theme {
     --spacing: 4px;
 
+    --text-sm: var(--text-sm);
+    --text-md: var(--font-size);
+    --text-lg: var(--text-lg);
+
     --text-slate: var(--color-slate-500);
     --text-gray: var(--color-gray-500);
     --text-zinc: var(--color-zinc-500);
@@ -23,9 +27,6 @@
     --text-fuchsia: var(--color-fuchsia-500);
     --text-pink: var(--color-pink-500);
     --text-rose: var(--color-rose-500);
-
-    --text-primary: var(--text-primary-color);
-    --text-secondary: var(--text-secondary-color);
 
     --bg-slate: var(--color-slate-500);
     --bg-gray: var(--color-gray-500);

@@ -1,1 +1,1 @@
-export * from './liquid.directive';
+export * from './liquid';

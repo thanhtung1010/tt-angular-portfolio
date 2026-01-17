@@ -30,7 +30,7 @@ import { LayoutService } from '@services';
 
 @Component({
     selector: 'lottie-animation',
-    templateUrl: './lottie-animation.component.html',
+    templateUrl: './lottie-animation.html',
 })
 export class LottieAnimationComponent implements OnInit, OnChanges, AfterViewInit, OnDestroy {
     @ViewChild('dotlottieCanvas') dotlottieCanvas!: ElementRef<HTMLCanvasElement>;
@@ -122,6 +122,10 @@ export class LottieAnimationComponent implements OnInit, OnChanges, AfterViewIni
 
     stop() {
         this._dotLottie()?.stop();
+    }
+
+    pause() {
+        this._dotLottie()?.pause();
     }
 
     play() {

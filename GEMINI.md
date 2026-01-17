@@ -4,6 +4,11 @@ This file serves as the "System Instructions" and "Rule File" for Gemini (Antigr
 
 ## 1. Project Context
 - **Project Name**: tt-angular-portfolio
+- **Project Type**: A high-performance, single-page Portfolio Landing Page for a Web Developer.
+- **Data Handling**: Static/Frontend-only (No Backend). Data is managed via local JSON or hardcoded Signals to maintain speed.
+- **Rendering Strategy**: **Angular SSR (Server-Side Rendering)** is enabled. 
+  - **SEO Priority**: Meta tags, Title service, and Semantic HTML are critical.
+  - **Hydration**: Use `provideClientHydration()` and ensure no direct DOM manipulation (avoid `window`, `document` outside of `isPlatformBrowser` checks).
 - **Framework**: Angular 20+ (Bleeding Edge/Latest)
 - **Styling**: Tailwind CSS 4.x
 - **Build System**: Angular CLI (`@angular/build`) with Application Builder (esbuild)
@@ -33,7 +38,7 @@ This file serves as the "System Instructions" and "Rule File" for Gemini (Antigr
 - **Naming**:
   - Files: `kebab-case` (e.g., `user-profile.component.ts`)
   - Classes: `PascalCase` (e.g., `UserProfileComponent`)
-  - Interfaces: `PascalCase` (e.g., `ISocialNetwork`)
+  - Interfaces: `I + PascalCase` (e.g., `IUserProfile`)
   - Variables/Functions: `camelCase` (e.g., `getUserData`)
   - Constants: `UPPER_SNAKE_CASE` (e.g., `MAX_RETRY_COUNT`)
   - Enums: `UPPER_SNAKE_CASE` (e.g., `MAX_RETRY_COUNT`)
@@ -42,6 +47,10 @@ This file serves as the "System Instructions" and "Rule File" for Gemini (Antigr
   - Place components within feature directories (`src/app/features/`).
   - Shared UI components go in `src/app/components/`.
   - Logic/Services go in `src/app/services/`.
+- **Selector Prefixing**: 
+  - Before creating components or directives, check `angular.json` for the `"prefix"` property.
+  - Always use this prefix for selectors (e.g., if prefix is `tt`, use `selector: 'tt-header'`).
+  - Do not hardcode `app-` if the configuration specifies otherwise.
 - **File Creation (Standalone Architecture)**:
   - **Directory Mapping**: Organize files strictly by type. 
     - Components: `src/app/components/{name}/` (contains .ts, .html, .spec.ts)
@@ -56,6 +65,16 @@ This file serves as the "System Instructions" and "Rule File" for Gemini (Antigr
     - If a new type folder is created, update `tsconfig.json` → `compilerOptions.paths`.
     - Example: `"@components/*": ["src/app/components/*"]`.
   - **Standalone Workflow**: Since these are standalone, do not look for or update `.module.ts` files. Focus on the `index.ts` for clean imports.
+- **SSR Safety**: When using Directives that touch the DOM (like `LiquidDirective`), always wrap logic in `afterNextRender` or check `isPlatformBrowser`.
+- **Style Management & SCSS Workflow**:
+  - **Global vs. Local**: Prefer using Tailwind utility classes in templates. If custom SCSS is required for complex animations or reusable patterns, **do not** use the `@Component({ styles: [...] })` property.
+  - **Find & Match Logic**: Before creating a new style rule, locate the appropriate file in `src/styles/scss/`:
+    - *Animations*: Update `animations.scss` for keyframes or complex transitions.
+    - *Component-specific*: Update `components.scss` for reusable UI patterns.
+    - *Selectors/Resets*: Update `selectors.scss` for tag-level styling.
+    - *Variables*: Update `variable.scss` for colors/spacing.
+  - **Import Hierarchy**: Ensure all new files or major changes are reflected in `index.scss` to maintain the build chain.
+  - **BEM Naming**: If writing custom SCSS, follow the BEM (Block Element Modifier) convention to avoid scoping issues in a standalone environment.
 
 ## 4. Testing
 - Use `ng test` (Karma/Jasmine) for unit tests.
@@ -65,3 +84,8 @@ This file serves as the "System Instructions" and "Rule File" for Gemini (Antigr
 - When planning complex changes, create an `implementation_plan.md`.
 - Update `task.md` to track progress.
 - Document any specific "gotchas" or workarounds in this file.
+
+## 6. Code Quality & Tooling
+- **Formatting**: Strictly follow the rules defined in the `.editorconfig` file (e.g., indentation size, charset, trailing whitespaces, and final newline). 
+- **Consistency**: Before providing code, mentally parse the `.editorconfig` to ensure the output matches the project's whitespace and coding style.
+- **Linting**: Ensure code is compatible with the project's ESLint/Prettier configuration. Use single quotes for strings and omit semicolons if defined by the project style, but prioritize the `.editorconfig` defaults.

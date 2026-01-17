@@ -18,7 +18,10 @@
             "@components": ["./src/app/components/index.ts"],
             "@directives": ["./src/app/directives/index.ts"],
             "@interfaces": ["./src/app/interfaces/index.ts"],
-            "@services": ["./src/app/services/index.ts"]
+            "@services": ["./src/app/services/index.ts"],
+            "@signals": ["./src/app/signals/index.ts"],
+            "@enums": ["./src/app/enums/index.ts"],
+            "@data": ["./src/app/data/index.ts"]
         }
     },
     "angularCompilerOptions": {

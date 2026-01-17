@@ -1,0 +1,59 @@
+<section class="tfe-section">
+    <h5 class="tfe-section-title">Core Philosophy</h5>
+    <p class="tfe-section-paragraph">
+        <span class="text-highlight">Code is for humans, execution is for machines.</span> > I believe in Clean Architecture and the power of Micro Frontends to build systems that aren't just scalable, but maintainable for years to come. My goal is to bridge the gap between complex UI/UX designs and high-performing technical reality, ensuring every pixel serves a purpose and every function runs with optimal performance.
+    </p>
+</section>
+
+<section class="tfe-section">
+    <h5 class="tfe-section-title">Joined Projects</h5>
+    <p class="tfe-section-paragraph">
+        <span class="text-highlight">🏠 Redoc — Frontend Developer.</span> Digitalizing the real estate lifecycle through automated contract generation and secure online signing.
+    </p>
+    <p class="tfe-section-paragraph">
+        <span class="text-highlight">🎁 Loyalty — Core & Library Developer.</span> Architecting reusable web components and authentication flows for global service groups.
+    </p>
+    <p class="tfe-section-paragraph">
+        <span class="text-highlight">📦 OMSIM — Frontend Developer (APAC).</span> Automating operational workflows for sales and customer care teams across Singapore, Malaysia, and New Zealand.
+    </p>
+</section>
+
+<section class="tfe-section">
+    <h5 class="tfe-section-title">Bucket List</h5>
+    <div class="tfe-bucket_list-wrapper">
+        <ul class="tfe-bucket_list">
+            @for (item of bucketItems.items();let i = $index; track i) {
+                <li class="tfe-bucket_list-item">
+                    <svg-loader [class]="item.color" [src]="item.svg"></svg-loader>
+                    <p>
+                        {{ item.text }}
+                    </p>
+                </li>
+            }
+        </ul>
+    </div>
+</section>
+
+<section class="tfe-section">
+    <h5 class="tfe-section-title">Interests Map</h5>
+    <interests-map></interests-map>
+</section>
+
+<section class="tfe-section">
+    <h5 class="tfe-section-title">Contact</h5>
+    <p class="tfe-section-paragraph">
+        I help you build scalable products and clean architectures.
+    </p>
+    <p class="tfe-section-paragraph">
+        I dedicate 4 hours of "deep work" daily to ship high-quality code for your MVP.
+    </p>
+    <p class="tfe-section-paragraph">
+        Interested in working together? Let's schedule and send me an
+        <url-layout class="text-nowrap" [href]="mailToHref()" target="_self">
+            <ng-container hrefContent>
+                <span class="text-link font-bold pr-1">Email</span>
+                <svg-loader class="inline text-link" [src]="svgChat()" size="15"></svg-loader>
+            </ng-container>
+        </url-layout>. I’ll buy the coffee.
+    </p>
+</section>

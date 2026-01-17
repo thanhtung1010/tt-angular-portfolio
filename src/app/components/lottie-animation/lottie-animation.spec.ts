@@ -3,21 +3,21 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
 import { DebugElement } from '@angular/core';
 
-import { SvgLoaderComponent } from './svg-loader.component';
+import { LottieAnimationComponent } from './lottie-animation';
 
-describe('SvgLoaderComponent', () => {
-  let component: SvgLoaderComponent;
-  let fixture: ComponentFixture<SvgLoaderComponent>;
+describe('LottieAnimationComponent', () => {
+  let component: LottieAnimationComponent;
+  let fixture: ComponentFixture<LottieAnimationComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ SvgLoaderComponent ]
+      declarations: [ LottieAnimationComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(SvgLoaderComponent);
+    fixture = TestBed.createComponent(LottieAnimationComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

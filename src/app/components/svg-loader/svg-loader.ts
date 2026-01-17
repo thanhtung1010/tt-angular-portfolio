@@ -16,7 +16,7 @@ import { DomSanitizer } from '@angular/platform-browser';
 @Component({
     selector: 'svg-loader',
     standalone: true,
-    templateUrl: './svg-loader.component.html',
+    templateUrl: './svg-loader.html',
 })
 export class SvgLoaderComponent implements AfterViewInit, OnChanges {
     @Input({required: true}) src!: string;

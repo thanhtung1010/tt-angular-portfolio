@@ -17,7 +17,7 @@ import {
 import { LayoutService } from '@services';
 
 @Component({
-    selector: 'app-root',
+    selector: 'tfe-root',
     templateUrl: './app.html',
     imports: [
         HeaderComponent,
