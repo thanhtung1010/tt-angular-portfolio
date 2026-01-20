@@ -1,36 +1,36 @@
 <h1 class="tfe-section-highlight_title">
-    Trinh Thanh Tung
+    {{ 'HEADER.NAME' | translate }}
 </h1>
 
 <section class="tfe-intro">
     <section class="left">
-        <article class="tfe-intro-article" [attr.title-content]="'WHO'">
+        <article class="tfe-intro-article" [attr.title-content]="'HEADER.WHO' | translate">
             <p class="tfe-intro-article-content">
-                Web Developer focused on turning your ideas into high-performing, scalable systems. Currently building digital transformation tools.
+                {{ 'HEADER.WHO_CONTENT' | translate }}
             </p>
         </article>
-        <article class="tfe-intro-article" [attr.title-content]="'PAST'">
+        <article class="tfe-intro-article" [attr.title-content]="'HEADER.PAST' | translate">
             <p class="tfe-intro-article-content">
-                Over 4 years of experience building modern web applications with a focus on clean architecture and performance optimization.
+                {{ 'HEADER.PAST_CONTENT_1' | translate }}
             </p>
             <p class="tfe-intro-article-content">
-                Contributed to production-ready systems for international markets like Singapore, Malaysia, and New Zealand. Expert in Angular, TypeScript, and Micro-frontend ecosystems.
+                {{ 'HEADER.PAST_CONTENT_2' | translate }}
             </p>
         </article>
     </section>
     <section class="right">
-        <article class="tfe-intro-article" [attr.title-content]="'NOW'">
+        <article class="tfe-intro-article" [attr.title-content]="'HEADER.NOW' | translate">
             <p class="tfe-intro-article-content">
-                <span class="text-highlight">⚡ Frontend Expert —</span> Expertise in the Angular ecosystem and TypeScript, implementing solid design patterns like Singleton and MicroFE.
+                <span class="text-highlight">{{ 'HEADER.NOW_FRONTEND_TITLE' | translate }}</span> {{ 'HEADER.NOW_FRONTEND_DESC' | translate }}
             </p>
             <p class="tfe-intro-article-content">
-                <span class="text-highlight">🛠️ Problem Solver —</span> Strong debugging skills to optimize UI performance and streamline developer workflows.
+                <span class="text-highlight">{{ 'HEADER.NOW_PROBLEM_TITLE' | translate }}</span> {{ 'HEADER.NOW_PROBLEM_DESC' | translate }}
             </p>
             <p class="tfe-intro-article-content">
-                <span class="text-highlight">🤖 AI-Driven —</span> Applying advanced AI tools (ChatGPT, Gemini) to boost productivity and accelerate development tasks.
+                <span class="text-highlight">{{ 'HEADER.NOW_AI_TITLE' | translate }}</span> {{ 'HEADER.NOW_AI_DESC' | translate }}
             </p>
             <p class="tfe-intro-article-content">
-                <span class="text-highlight">🤝 Collaborator —</span> Proven ability to lead and collaborate across teams to ensure high-quality, timely production deliveries.
+                <span class="text-highlight">{{ 'HEADER.NOW_COLLAB_TITLE' | translate }}</span> {{ 'HEADER.NOW_COLLAB_DESC' | translate }}
             </p>
         </article>
     </section>

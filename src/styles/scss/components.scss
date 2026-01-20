@@ -73,12 +73,32 @@
             @apply max-w-4xl mx-auto lg:pb-6!;
         }
 
+        &-setting {
+            @apply fixed bottom-5 right-5 w-fit h-fit z-9999;
+
+            &-wrapper {
+                @apply relative w-15 h-15 overflow-visible z-0;
+            }
+
+            &-button {
+                @apply relative w-full h-full bg-transparent cursor-pointer border-4 border-gray-500 rounded-4xl z-2;
+            }
+
+            &-menu {
+                @apply absolute bottom-0 right-0 z-1 border-4 w-40 h-50 overflow-y-auto overflow-x-hidden border-gray-500 rounded-4xl bg-(--bg-color) p-3;
+            }
+
+            &-item {
+                @apply flex items-center justify-between gap-2 font-semibold min-w-30 mb-1;
+            }
+        }
+
         &-cat-loading {
-            @apply fixed bottom-0 left-1/2 -translate-x-1/2;
+            @apply fixed bottom-0 left-1/2 -translate-x-1/2 z-99999;
         }
 
         &-bg-cat-loading {
-            @apply fixed bottom-0 left-0 w-full h-full backdrop-blur-md;
+            @apply fixed bottom-0 left-0 w-full h-full backdrop-blur-md z-99998;
         }
 
         &-hidden-scroll {

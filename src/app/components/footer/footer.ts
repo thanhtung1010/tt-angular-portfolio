@@ -1,10 +1,11 @@
 import { Component, inject, OnInit, signal, WritableSignal } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
 import { LayoutService } from '@services';
+import { TranslatePipe } from '@ngx-translate/core';
 
 @Component({
     selector: 'footer',
     templateUrl: './footer.html',
+    imports: [TranslatePipe],
 })
 export class FooterComponent implements OnInit {
 

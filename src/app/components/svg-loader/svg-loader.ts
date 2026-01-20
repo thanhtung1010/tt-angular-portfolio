@@ -1,4 +1,3 @@
-import { HttpClient } from '@angular/common/http';
 import {
     AfterViewInit,
     Component,
@@ -12,6 +11,7 @@ import {
     SimpleChanges
 } from '@angular/core';
 import { DomSanitizer } from '@angular/platform-browser';
+import { SvgLoaderService } from '@services';
 
 @Component({
     selector: 'svg-loader',
@@ -27,10 +27,9 @@ export class SvgLoaderComponent implements AfterViewInit, OnChanges {
     @Input() color: string = 'currentColor';
 
     private _renderer: Renderer2 = inject(Renderer2);
-    private _http: HttpClient = inject(HttpClient);
+    private _svgService: SvgLoaderService = inject(SvgLoaderService);
     private _elementRef: ElementRef = inject(ElementRef<HTMLElement>);
     private _sanitizer: DomSanitizer = inject(DomSanitizer);
-    private static _svgCache = new Map<string, string>();
     private readonly defaultSize: number = 24;
     protected svgContent = signal('');
 
@@ -66,14 +65,7 @@ export class SvgLoaderComponent implements AfterViewInit, OnChanges {
     private _loadSvg() {
         if (!this.src) return;
 
-        const cached = SvgLoaderComponent._svgCache.get(this.src);
-        if (cached) {
-            this.svgContent.set(cached);
-            return;
-        }
-
-        this._http.get(this.src, { responseType: 'text' }).subscribe((raw) => {
-            SvgLoaderComponent._svgCache.set(this.src, raw);
+        this._svgService.getSvg(this.src).subscribe((raw) => {
             this.svgContent.set(raw);
         });
     }
@@ -108,20 +100,35 @@ export class SvgLoaderComponent implements AfterViewInit, OnChanges {
 
     private _svgSize(svgEl: SVGElement): SVGElement {
         if (this.size) {
-            svgEl.style.width = `${this.size}px`;
-            svgEl.style.height = `${this.size}px`;
+            if (typeof this.size === 'number') {
+                svgEl.style.width = `${this.size}px`;
+                svgEl.style.height = `${this.size}px`;
+            } else {
+                svgEl.style.width = this.size;
+                svgEl.style.height = this.size;
+            }
             return svgEl;
         }
 
         if (this.width) {
-            svgEl.style.width = `${this.width}px`;
-            svgEl.style.height = `auto`;
+            if (typeof this.width === 'number') {
+                svgEl.style.width = `${this.width}px`;
+                svgEl.style.height = `auto`;
+            } else {
+                svgEl.style.width = this.width;
+                svgEl.style.height = `auto`;
+            }
             return svgEl;
         }
 
         if (this.height) {
-            svgEl.style.height = `${this.height}px`;
-            svgEl.style.width = `auto`;
+            if (typeof this.height === 'number') {
+                svgEl.style.height = `${this.height}px`;
+                svgEl.style.width = `auto`;
+            } else {
+                svgEl.style.height = this.height;
+                svgEl.style.width = `auto`;
+            }
             return svgEl;
         }
 

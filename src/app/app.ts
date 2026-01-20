@@ -12,9 +12,9 @@ import {
     HeaderComponent,
     LottieAnimationComponent,
     MainComponent,
-    NavComponent,
+    SettingComponent,
 } from '@components';
-import { LayoutService } from '@services';
+import { LayoutService, LanguageService } from '@services';
 
 @Component({
     selector: 'tfe-root',
@@ -23,7 +23,7 @@ import { LayoutService } from '@services';
         HeaderComponent,
         MainComponent,
         FooterComponent,
-        NavComponent,
+        SettingComponent,
         LottieAnimationComponent,
     ],
 })
@@ -34,26 +34,26 @@ export class App implements AfterViewInit {
         'https://lottie.host/9b524a98-c3d4-415f-b4f3-a79bf4c3d395/b1FArc0UlB.lottie'
     );
     protected loading: WritableSignal<boolean> = signal(true);
-    protected visibleNav: WritableSignal<boolean> = signal(false);
+    private readonly _languageService = inject(LanguageService);
 
-    constructor() {}
+    constructor() {
+        this._languageService.init();
+    }
 
     ngAfterViewInit(): void {
         this._layoutService.loading$
             .pipe(takeUntilDestroyed(this._destroyRef))
             .subscribe((resp) => {
-                this.loading.set(resp());
+                this.loading.set(resp);
 
                 if (this._layoutService.isBrowser()) {
                     this._layoutService.toggleScroll('app-root');
                 }
             });
 
-        this._layoutService.nav$
-            .pipe(takeUntilDestroyed(this._destroyRef))
-            .subscribe((resp) => {
-                this.visibleNav.set(resp());
-            });
+        this._layoutService.theme$.pipe(takeUntilDestroyed(this._destroyRef)).subscribe(theme => {
+            this._layoutService.updateThemeClass(theme);
+        });
 
         const _timeout = setTimeout(() => {
             this._layoutService.loading$ = !this.loading();

@@ -1,35 +1,47 @@
 import { isPlatformBrowser } from "@angular/common";
 import { Inject, Injectable, PLATFORM_ID, signal, WritableSignal } from "@angular/core";
 import { BehaviorSubject } from "rxjs";
+import { THEME_ENUM } from "@enums";
+import { DEFAULT_THEME } from "@data";
 
 @Injectable({
     providedIn: 'any'
 })
 export class LayoutService {
 
-    get loading$(): BehaviorSubject<WritableSignal<boolean>> {
+    get loading$(): BehaviorSubject<boolean> {
         return this._loading$;
     }
     set loading$(loading: boolean) {
-        if (loading !== this._loading$.value()) {
-            const value = this._loading$.value;
-            value.set(loading);
+        const value = !!loading;
+        if (value !== this._loading$.value) {
             this._loading$.next(value);
         }
     }
-    private readonly _loading$: BehaviorSubject<WritableSignal<boolean>> = new BehaviorSubject(signal(true));
+    private readonly _loading$: BehaviorSubject<boolean> = new BehaviorSubject(true);
 
-    get nav$(): BehaviorSubject<WritableSignal<boolean>> {
-        return this._nav$;
+    get setting$(): BehaviorSubject<boolean> {
+        return this._setting$;
     }
-    set nav$(nav: boolean) {
-        if (nav !== this._nav$.value()) {
-            const value = this._nav$.value;
-            value.set(nav);
-            this._nav$.next(value);
+    set setting$(visible: boolean) {
+        const value = !!visible;
+        if (value !== this._setting$.value) {
+            this._setting$.next(value);
         }
     }
-    private readonly _nav$: BehaviorSubject<WritableSignal<boolean>> = new BehaviorSubject(signal(false));
+    private readonly _setting$: BehaviorSubject<boolean> = new BehaviorSubject(false);
+
+    get theme$(): BehaviorSubject<THEME_ENUM> {
+        return this._theme$;
+    }
+    set theme$(theme: THEME_ENUM) {
+        if (theme !== this._theme$.value) {
+            this._theme$.next(theme);
+        }
+    }
+    private readonly _theme$: BehaviorSubject<THEME_ENUM> = new BehaviorSubject(DEFAULT_THEME);
+
+    readonly isThemeDefault = signal(true);
 
     get isBrowser(): WritableSignal<boolean> {
         return this._isBrowser;
@@ -44,25 +56,51 @@ export class LayoutService {
     private readonly _hiddenClass: string = 'tfe-hidden-scroll';
 
     constructor(@Inject(PLATFORM_ID) private platformId: Object) {
-        this.isBrowser.set(isPlatformBrowser(this.platformId))
+        this.isBrowser.set(isPlatformBrowser(this.platformId));
+    }
+
+    updateThemeClass(theme: THEME_ENUM) {
+        this._updateBodyClass(THEME_ENUM.LIGHT, 'remove');
+        this._updateBodyClass(THEME_ENUM.DARK, 'remove');
+        this._updateBodyClass(theme, 'add');
+    }
+
+    private _updateBodyClass(cls: string, action: 'add' | 'remove') {
+        if (this._isBrowser()) {
+            const body = document.querySelector('body');
+            if (body) {
+                if (action === 'add') {
+                    body.classList.add(cls);
+                } else {
+                    body.classList.remove(cls);
+                }
+            }
+        }
     }
 
     toggleScroll(selector: string) {
         const elm = document.querySelector(selector);
         if (elm) {
             const cls = elm.className;
-            console.log(cls)
             if (cls.includes(this._hiddenClass)) {
                 elm.className = cls.replace(this._hiddenClass, '').trim();
+                this._updateBodyClass(this._hiddenClass, 'remove');
             } else {
                 elm.className = [cls, this._hiddenClass].join(' ');
+                this._updateBodyClass(this._hiddenClass, 'add');
             }
         }
     }
 
-    toggleNav() {
-        const nav = !this.nav$.value();
-        this.toggleScroll('app-root');
-        this.nav$.next(signal(nav));
+    toggleSetting() {
+        const value = !this.setting$.value;
+        this.setting$ = value;
+    }
+
+    toggleTheme() {
+        const current = this.theme$.value;
+        const next = current === THEME_ENUM.LIGHT ? THEME_ENUM.DARK : THEME_ENUM.LIGHT;
+        this.theme$ = next;
+        this.isThemeDefault.set(next === THEME_ENUM.LIGHT);
     }
 }

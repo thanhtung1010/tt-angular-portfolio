@@ -75,6 +75,10 @@ This file serves as the "System Instructions" and "Rule File" for Gemini (Antigr
     - *Variables*: Update `variable.scss` for colors/spacing.
   - **Import Hierarchy**: Ensure all new files or major changes are reflected in `index.scss` to maintain the build chain.
   - **BEM Naming**: If writing custom SCSS, follow the BEM (Block Element Modifier) convention to avoid scoping issues in a standalone environment.
+  - **Asset Management**:
+    - If a task involves static assets (images, icons, fonts, etc.), do not look for an `assets` folder inside `src/`.
+    - All assets must be placed in the `public/` folder at the project root.
+    - Reference these in code using absolute paths (e.g., `/images/logo.png`) as the build system maps the `public` content to the root of the deployed site.
 
 ## 4. Testing
 - Use `ng test` (Karma/Jasmine) for unit tests.
@@ -89,3 +93,9 @@ This file serves as the "System Instructions" and "Rule File" for Gemini (Antigr
 - **Formatting**: Strictly follow the rules defined in the `.editorconfig` file (e.g., indentation size, charset, trailing whitespaces, and final newline). 
 - **Consistency**: Before providing code, mentally parse the `.editorconfig` to ensure the output matches the project's whitespace and coding style.
 - **Linting**: Ensure code is compatible with the project's ESLint/Prettier configuration. Use single quotes for strings and omit semicolons if defined by the project style, but prioritize the `.editorconfig` defaults.
+
+## 7. Dependency & Tooling
+- **Package Management**:
+  - When suggesting or executing commands to install dependencies (`npm install`), **always** append the `-E` (or `--save-exact`) flag.
+  - Example: `npm install @angular/material -E`.
+  - This ensures versions are locked in `package.json` to prevent unexpected updates and maintain environment consistency across SSR and client builds.

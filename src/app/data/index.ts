@@ -1,2 +1,3 @@
 export * from './bucket-list';
-// export * from './interests-map';
+export * from './theme';
+export * from './interests-map';

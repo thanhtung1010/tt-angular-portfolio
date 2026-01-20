@@ -4,11 +4,12 @@ import { ArraySignal, IBucketListItem } from '@interfaces';
 import { SvgLoaderComponent } from '../svg-loader/svg-loader';
 import { URLLayoutComponent } from '../url-layout/url-layout';
 import { InterestsMapComponent } from '../interests-map/interests-map';
+import { TranslatePipe } from '@ngx-translate/core';
 
 @Component({
     selector: 'main',
     templateUrl: './main.html',
-    imports: [SvgLoaderComponent, URLLayoutComponent, InterestsMapComponent],
+    imports: [SvgLoaderComponent, URLLayoutComponent, InterestsMapComponent, TranslatePipe],
 })
 export class MainComponent implements OnInit {
     protected readonly svgChat = signal('/assets/svg/chat.svg');

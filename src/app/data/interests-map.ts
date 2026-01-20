@@ -5,169 +5,134 @@ export const INTERESTS_DATA: InterestGraph = {
         // Root
         { id: 'root', label: '', group: 'root', type: 'root' },
 
-        // Economy (Blue)
-        { id: 'Economy', label: 'Economy', group: 'economy', type: 'category' },
-        { id: 'Stock Market', label: 'Stock Market', group: 'economy', type: 'item' },
-        { id: 'UK Economy', label: 'UK Economy', group: 'economy', type: 'item' },
-        { id: 'Optimization', label: 'Optimization', group: 'economy', type: 'item' },
+        // 1. Economy (Blue)
+        { id: 'Economy', label: 'MAIN.INTERESTS.NODES.ECONOMY', group: 'economy', type: 'category' },
+        { id: 'Stock', label: 'MAIN.INTERESTS.ITEMS.STOCK', group: 'economy', type: 'item' },
+        { id: 'Crypto', label: 'MAIN.INTERESTS.ITEMS.CRYPTO', group: 'economy', type: 'item' },
+        { id: 'Gold', label: 'MAIN.INTERESTS.ITEMS.GOLD', group: 'economy', type: 'item' },
+        { id: '6 Jars', label: 'MAIN.INTERESTS.ITEMS.SIX_JARS', group: 'economy', type: 'item' },
 
-        // Industries (Orange)
-        { id: 'Industries', label: 'Industries', group: 'industries', type: 'category' },
-        { id: 'Culture_Ind', label: 'Culture', group: 'industries', type: 'item' }, // Disambiguate from other Culture
-        { id: 'Automation', label: 'Automation', group: 'industries', type: 'item' },
-        { id: 'Productivity', label: 'Productivity', group: 'industries', type: 'item' },
-        { id: 'Communication', label: 'Communication', group: 'industries', type: 'item' },
-        { id: 'Social', label: 'Social', group: 'industries', type: 'item' },
+        // 2. Domain (Orange)
+        { id: 'Domain', label: 'MAIN.INTERESTS.NODES.DOMAIN', group: 'domain', type: 'category' },
+        { id: 'CMS', label: 'MAIN.INTERESTS.ITEMS.CMS', group: 'domain', type: 'item' },
+        { id: 'Loyalty', label: 'MAIN.INTERESTS.ITEMS.LOYALTY', group: 'domain', type: 'item' },
+        { id: 'E-commerce', label: 'MAIN.INTERESTS.ITEMS.ECOMMERCE', group: 'domain', type: 'item' },
+        { id: 'News/Blog', label: 'MAIN.INTERESTS.ITEMS.NEWS_BLOG', group: 'domain', type: 'item' },
+        { id: 'Real Estate', label: 'MAIN.INTERESTS.ITEMS.REAL_ESTATE', group: 'domain', type: 'item' },
 
-        // Leisure (Green/Teal)
-        { id: 'Leisure', label: 'Leisure', group: 'leisure', type: 'category' },
-        { id: 'Nintendo Switch', label: 'Nintendo\nSwitch', group: 'leisure', type: 'item' },
-        { id: 'Specialty Coffee', label: 'Specialty\nCoffee', group: 'leisure', type: 'item' },
-        { id: 'NYC Places', label: 'NYC Places', group: 'leisure', type: 'item' },
-        { id: 'Photography', label: 'Photography', group: 'leisure', type: 'item' },
-        { id: 'Leica', label: 'Leica', group: 'leisure', type: 'item' },
-        { id: 'Pop Culture', label: 'Pop Culture', group: 'leisure', type: 'item' },
-        { id: 'London Places', label: 'London\nPlaces', group: 'leisure', type: 'item' },
+        // 3. Leisure (Green)
+        { id: 'Leisure', label: 'MAIN.INTERESTS.NODES.LEISURE', group: 'leisure', type: 'category' },
+        { id: 'Music', label: 'MAIN.INTERESTS.ITEMS.MUSIC', group: 'leisure', type: 'item' },
+        { id: 'League of Legends', label: 'MAIN.INTERESTS.ITEMS.LOL', group: 'leisure', type: 'item' },
+        { id: 'Photography_Leisure', label: 'MAIN.INTERESTS.ITEMS.PHOTOGRAPHY', group: 'leisure', type: 'item' },
+        { id: 'Sniper/Archer', label: 'MAIN.INTERESTS.ITEMS.SNIPER_ARCHER', group: 'leisure', type: 'item' },
+        { id: 'Coffee', label: 'MAIN.INTERESTS.ITEMS.COFFEE', group: 'leisure', type: 'item' },
 
-        // Geopolitics (Red)
-        { id: 'Geopolitics', label: 'Geopolitics', group: 'geopolitics', type: 'category' },
-        { id: 'Politics', label: 'Politics', group: 'geopolitics', type: 'item' },
-        { id: 'Media', label: 'Media', group: 'geopolitics', type: 'item' },
-        { id: 'G2C', label: 'G2C', group: 'geopolitics', type: 'item' },
-        { id: 'Military', label: 'Military', group: 'geopolitics', type: 'item' },
-        { id: 'Ukraine', label: 'Ukraine', group: 'geopolitics', type: 'item' },
+        // 4. DIY (Teal/Cyan)
+        { id: 'DIY', label: 'MAIN.INTERESTS.NODES.DIY', group: 'diy', type: 'category' },
+        { id: '3D Printing', label: 'MAIN.INTERESTS.ITEMS.3D_PRINTING', group: 'diy', type: 'item' },
+        { id: '3D Design', label: 'MAIN.INTERESTS.ITEMS.3D_DESIGN', group: 'diy', type: 'item' },
+        { id: 'Maker World', label: 'MAIN.INTERESTS.ITEMS.MAKER_WORLD', group: 'diy', type: 'item' },
+        { id: 'Handmade', label: 'MAIN.INTERESTS.ITEMS.HANDMADE', group: 'diy', type: 'item' },
 
-        // Porsche (Light Green)
-        { id: 'Porsche', label: 'Porsche', group: 'porsche', type: 'category' },
-        { id: 'Porsche 911', label: 'Porsche 911', group: 'porsche', type: 'item' },
-        { id: 'Engine Patents', label: 'Engine\nPatents', group: 'porsche', type: 'item' },
+        // 5. Tech (Purple)
+        { id: 'Tech', label: 'MAIN.INTERESTS.NODES.TECH', group: 'tech', type: 'category' },
+        { id: 'Webapp', label: 'MAIN.INTERESTS.ITEMS.WEBAPP', group: 'tech', type: 'item' },
+        { id: 'Blockchain', label: 'MAIN.INTERESTS.ITEMS.BLOCKCHAIN', group: 'tech', type: 'item' },
+        { id: 'AI', label: 'MAIN.INTERESTS.ITEMS.AI', group: 'tech', type: 'item' },
+        { id: 'AR/VR', label: 'MAIN.INTERESTS.ITEMS.AR_VR', group: 'tech', type: 'item' },
 
-        // Tech (Purple)
-        { id: 'Tech', label: 'Tech', group: 'tech', type: 'category' },
-        { id: 'Artificial Intelligence', label: 'Artificial\nIntelligence', group: 'tech', type: 'item' },
-        { id: 'Typography', label: 'Typography', group: 'tech', type: 'item' },
-        { id: 'Tech Predictions', label: 'Tech\nPredictions', group: 'tech', type: 'item' },
-        { id: 'VC Startups', label: 'VC Startups', group: 'tech', type: 'item' }, // Shared with design? Image shows line from Tech? No, line from Design? Let's check image carefully.
-        // Image: VC Startups is connected to Design mostly, but looks close to Tech.
-        // Let's attach to Design based on color (Pink).
-        
-        // Design (Pink)
-        { id: 'Design', label: 'Design', group: 'design', type: 'category' },
-        { id: 'Creative Tools', label: 'Creative\nTools', group: 'design', type: 'item' },
-        // VC Startups is purple dot? No, it's pink dot in image.
-        // Wait, "VC Startups" dot is purple-ish in image? 
-        // Tech is Purple. "VC Startups" dot is Purple. Lines go to Tech node maybe?
-        // Actually, looking at image: 
-        // "VC Startups" is connected to "Design" node via pink line. But dot is purple? 
-        // Or maybe it's connected to Tech?
-        // Let's assume connected to Design for now based on proximity.
-        // Re-evaluating image: "VC Startups" is connected to "Design" (Pink line).
-        { id: 'VC Startups_Item', label: 'VC Startups', group: 'design', type: 'item' }, // Naming ID distinct
-        { id: 'Personal Websites', label: 'Personal\nWebsites', group: 'design', type: 'item' },
-        { id: 'UI Design', label: 'UI Design', group: 'design', type: 'item' },
-        { id: 'Game Design', label: 'Game Design', group: 'design', type: 'item' },
-        { id: 'Fashion', label: 'Fashion', group: 'design', type: 'item' },
+        // 6. Design (Pink)
+        { id: 'Design', label: 'MAIN.INTERESTS.NODES.DESIGN', group: 'design', type: 'category' },
+        { id: 'UIUX Design', label: 'MAIN.INTERESTS.ITEMS.UIUX_DESIGN', group: 'design', type: 'item' },
+        { id: 'Animation', label: 'MAIN.INTERESTS.ITEMS.ANIMATION', group: 'design', type: 'item' },
+        { id: 'Game Design', label: 'MAIN.INTERESTS.ITEMS.GAME_DESIGN', group: 'design', type: 'item' },
+        { id: 'Figma', label: 'MAIN.INTERESTS.ITEMS.FIGMA', group: 'design', type: 'item' },
+        { id: 'Adobe', label: 'MAIN.INTERESTS.ITEMS.ADOBE', group: 'design', type: 'item' },
+        { id: 'Minimalism', label: 'MAIN.INTERESTS.ITEMS.MINIMALISM', group: 'design', type: 'item' },
 
-        // Culture (Teal)
-        { id: 'Culture', label: 'Culture', group: 'culture', type: 'category' },
-        { id: 'Jack White', label: 'Jack White', group: 'culture', type: 'item' },
-        { id: 'Theatre', label: 'Theatre', group: 'culture', type: 'item' },
-        { id: 'Comedy', label: 'Comedy', group: 'culture', type: 'item' },
-        { id: 'Movies', label: 'Movies', group: 'culture', type: 'item' },
-        { id: 'TV Shows', label: 'TV Shows', group: 'culture', type: 'item' },
-        { id: 'Tennis', label: 'Tennis', group: 'culture', type: 'item' },
-        { id: 'ATP Top 20', label: 'ATP Top 20', group: 'culture', type: 'item' },
-        { id: 'Rackets Technology', label: 'Rackets\nTechnology', group: 'culture', type: 'item' },
-        { id: 'WTA Ukraine', label: 'WTA Ukraine', group: 'culture', type: 'item' },
+        // 7. Lifestyle (Red)
+        { id: 'Lifestyle', label: 'MAIN.INTERESTS.NODES.LIFESTYLE', group: 'lifestyle', type: 'category' },
+        { id: 'Rap', label: 'MAIN.INTERESTS.ITEMS.RAP', group: 'lifestyle', type: 'item' },
+        { id: 'Photography', label: 'MAIN.INTERESTS.ITEMS.PHOTOGRAPHY', group: 'lifestyle', type: 'item' },
+        { id: 'Landscape', label: 'MAIN.INTERESTS.ITEMS.LANDSCAPE', group: 'lifestyle', type: 'item' },
+        { id: 'Life', label: 'MAIN.INTERESTS.ITEMS.DAILY_LIFE', group: 'lifestyle', type: 'item' },
+        { id: 'Street', label: 'MAIN.INTERESTS.ITEMS.STREET', group: 'lifestyle', type: 'item' },
+        { id: 'Indie Music', label: 'MAIN.INTERESTS.ITEMS.INDIE_MUSIC', group: 'lifestyle', type: 'item' },
+        { id: 'ESports', label: 'MAIN.INTERESTS.ITEMS.ESPORTS', group: 'lifestyle', type: 'item' },
+        { id: 'Sports', label: 'MAIN.INTERESTS.ITEMS.SPORTS', group: 'lifestyle', type: 'item' },
+        { id: 'Cat', label: 'MAIN.INTERESTS.ITEMS.CAT_LOVER', group: 'lifestyle', type: 'item' },
     ],
     links: [
         // Root connections
         { source: 'root', target: 'Economy' },
-        { source: 'root', target: 'Industries' },
+        { source: 'root', target: 'Domain' },
         { source: 'root', target: 'Leisure' },
-        { source: 'root', target: 'Geopolitics' },
-        { source: 'root', target: 'Porsche' },
+        { source: 'root', target: 'DIY' },
         { source: 'root', target: 'Tech' },
         { source: 'root', target: 'Design' },
-        { source: 'root', target: 'Culture' },
+        { source: 'root', target: 'Lifestyle' },
 
         // Economy
-        { source: 'Economy', target: 'Stock Market' },
-        { source: 'Economy', target: 'UK Economy' },
-        { source: 'Economy', target: 'Optimization' },
+        { source: 'Economy', target: 'Stock' },
+        { source: 'Economy', target: 'Crypto' },
+        { source: 'Economy', target: 'Gold' },
+        { source: 'Economy', target: '6 Jars' },
 
-        // Industries
-        { source: 'Industries', target: 'Culture_Ind' },
-        { source: 'Industries', target: 'Automation' },
-        { source: 'Industries', target: 'Productivity' },
-        { source: 'Industries', target: 'Communication' },
-        { source: 'Industries', target: 'Social' },
+        // Domain
+        { source: 'Domain', target: 'CMS' },
+        { source: 'Domain', target: 'Loyalty' },
+        { source: 'Domain', target: 'E-commerce' },
+        { source: 'Domain', target: 'News/Blog' },
+        { source: 'Domain', target: 'Real Estate' },
 
         // Leisure
-        { source: 'Leisure', target: 'Nintendo Switch' },
-        { source: 'Leisure', target: 'Specialty Coffee' },
-        { source: 'Leisure', target: 'NYC Places' },
-        { source: 'Leisure', target: 'Photography' },
-        // Photography sub-links
-        { source: 'Photography', target: 'Leica' }, 
-        
-        { source: 'Leisure', target: 'Pop Culture' },
-        { source: 'Leisure', target: 'London Places' },
+        { source: 'Leisure', target: 'Music' },
+        { source: 'Leisure', target: 'League of Legends' },
+        { source: 'Leisure', target: 'Photography_Leisure' },
+        { source: 'Leisure', target: 'Sniper/Archer' },
+        { source: 'Leisure', target: 'Coffee' },
 
-        // Geopolitics
-        { source: 'Geopolitics', target: 'Politics' },
-        { source: 'Geopolitics', target: 'Media' },
-        { source: 'Geopolitics', target: 'G2C' },
-        { source: 'Geopolitics', target: 'Military' },
-        { source: 'Geopolitics', target: 'Ukraine' },
-
-        // Porsche
-        { source: 'Porsche', target: 'Porsche 911' },
-        { source: 'Porsche', target: 'Engine Patents' },
+        // DIY
+        { source: 'DIY', target: '3D Printing' },
+        { source: 'DIY', target: '3D Design' },
+        { source: 'DIY', target: 'Maker World' },
+        { source: 'DIY', target: 'Handmade' },
 
         // Tech
-        { source: 'Tech', target: 'Artificial Intelligence' },
-        { source: 'Tech', target: 'Typography' },
-        { source: 'Tech', target: 'Tech Predictions' },
+        { source: 'Tech', target: 'Webapp' },
+        { source: 'Tech', target: 'Blockchain' },
+        { source: 'Tech', target: 'AI' },
+        { source: 'Tech', target: 'AR/VR' },
 
         // Design
-        { source: 'Design', target: 'VC Startups_Item' },
-        { source: 'Design', target: 'Personal Websites' },
-        { source: 'Design', target: 'UI Design' },
+        { source: 'Design', target: 'UIUX Design' },
+        { source: 'Design', target: 'Animation' },
         { source: 'Design', target: 'Game Design' },
-        { source: 'Design', target: 'Fashion' },
-        { source: 'Design', target: 'Creative Tools' },
+        { source: 'Design', target: 'Figma' },
+        { source: 'Design', target: 'Adobe' },
+        { source: 'Design', target: 'Minimalism' },
 
-        // Culture (Teal)
-        { source: 'Culture', target: 'Jack White' },
-        { source: 'Culture', target: 'Theatre' },
-        { source: 'Culture', target: 'Comedy' },
-        { source: 'Culture', target: 'Movies' },
-        { source: 'Culture', target: 'TV Shows' },
-        { source: 'Culture', target: 'Tennis' },
-        // Tennis sub-links or direct?
-        // Image: Tennis -> ATP Top 20, RacketsTech, WTA Ukraine ?
-        // Or all from Culture?
-        // Looks like: Culture -> Tennis
-        // And Tennis -> ATP Top 20
-        // Tennis -> WTA Ukraine
-        // Tennis -> Rackets Technology
-        // Let's refine based on visual tree structure.
-        { source: 'Tennis', target: 'ATP Top 20' },
-        { source: 'Tennis', target: 'Rackets Technology' },
-        { source: 'Tennis', target: 'WTA Ukraine' },
-        
+        // Lifestyle
+        { source: 'Lifestyle', target: 'Rap' },
+        { source: 'Lifestyle', target: 'Photography' },
+        { source: 'Photography', target: 'Landscape' },
+        { source: 'Photography', target: 'Life' },
+        { source: 'Photography', target: 'Street' },
+        { source: 'Lifestyle', target: 'Indie Music' },
+        { source: 'Lifestyle', target: 'ESports' },
+        { source: 'Lifestyle', target: 'Sports' },
+        { source: 'Lifestyle', target: 'Cat' },
     ]
 };
 
 export const CATEGORY_COLORS: Record<string, string> = {
-    economy: '#4f8aff', // Blue
-    industries: '#ff9f4f', // Orange
-    leisure: '#4ebd94', // Green
-    geopolitics: '#ff5c5c', // Red
-    porsche: '#9acd32', // Light Green
-    tech: '#a855f7', // Purple
-    design: '#ff69b4', // Pink
-    culture: '#20b2aa', // Teal
+    economy: '#4f8aff',    // Blue
+    domain: '#ff9f4f',     // Orange
+    leisure: '#4ebd94',    // Green
+    diy: '#20b2aa',        // Teal
+    tech: '#a855f7',       // Purple
+    design: '#ff69b4',     // Pink
+    lifestyle: '#ff5c5c',  // Red
     root: '#ffffff'
 };

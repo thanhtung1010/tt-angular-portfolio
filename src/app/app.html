@@ -1,10 +1,4 @@
-@if (visibleNav()) {
-    <nav
-        class="tfe-nav"
-        animate.leave="tfe-leave-fade"
-        animate.enter="tfe-enter-fade"
-    ></nav>
-}
+<setting class="tfe-setting"></setting>
 
 <header class="tfe-header tfe-section"></header>
 <main class="tfe-main"></main>
@@ -13,13 +7,13 @@
 @if (loading()) {
     <div
         class="tfe-bg-cat-loading"
-        animate.leave="tfe-leave-fade"
-        animate.enter="tfe-enter-fade"
+        animate.leave="tfe-leave_fade"
+        animate.enter="tfe-enter_fade"
     ></div>
     <lottie-animation
         class="tfe-cat-loading"
         [config]="lottie()"
-        animate.leave="tfe-leave-slide-y tfe-leave-fade"
-        animate.enter="tfe-enter-slide-fade-y"
+        animate.leave="tfe-leave_slide_y tfe-leave_fade"
+        animate.enter="tfe-enter_slide_fade_y"
     ></lottie-animation>
 }

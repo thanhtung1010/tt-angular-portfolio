@@ -1,8 +1,10 @@
-import { Component, ElementRef, inject, OnInit, ViewChild } from '@angular/core';
+import { Component, DestroyRef, ElementRef, inject, OnInit, ViewChild } from '@angular/core';
 import { LayoutService } from '@services';
 import * as d3 from 'd3';
-import { CATEGORY_COLORS, INTERESTS_DATA } from '../../data/interests-map';
+import { CATEGORY_COLORS, INTERESTS_DATA } from '@data';
 import { InterestNode } from '@interfaces';
+import { TranslateService } from '@ngx-translate/core';
+import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 
 @Component({
     selector: 'interests-map',
@@ -12,11 +14,20 @@ export class InterestsMapComponent implements OnInit {
     @ViewChild('interestMap', { static: true }) interestMap!: ElementRef<HTMLElement>;
 
     private readonly _layoutService: LayoutService = inject(LayoutService);
+    private readonly _translateService = inject(TranslateService);
+    private readonly _destroyRef = inject(DestroyRef);
 
     constructor() {}
 
     ngOnInit() {
         if (this._layoutService.isBrowser()) {
+            this._translateService.onLangChange
+                .pipe(takeUntilDestroyed(this._destroyRef))
+                .subscribe(() => {
+                    this.createGraph();
+                });
+            
+            // Initial render if language is already set, or default
             this.createGraph();
         }
     }
@@ -184,7 +195,7 @@ export class InterestsMapComponent implements OnInit {
 
         // Labels
         node.append('text')
-            .text((d: any) => d.label)
+            .text((d: any) => d.type === 'root' ? '' : this._translateService.instant(d.label))
             .attr('font-size', '10px')
             .attr('fill', '#666')
             .attr('dx', 8)

@@ -1,0 +1,125 @@
+{
+    "SETTING": {
+        "THEME": "Giao diện",
+        "LANG": "Ngôn ngữ"
+    },
+    "HEADER": {
+        "NAME": "Trịnh Thanh Tùng",
+        "WHO": "LÀ AI",
+        "WHO_CONTENT": "Lập trình viên Web tập trung vào biến ý tưởng của bạn thành các hệ thống hiệu suất cao, có khả năng mở rộng. Hiện đang xây dựng các công cụ chuyển đổi số.",
+        "PAST": "ĐÃ LÀM",
+        "PAST_CONTENT_1": "Hơn 4 năm kinh nghiệm xây dựng các ứng dụng web hiện đại với trọng tâm là kiến trúc sạch và tối ưu hóa hiệu suất.",
+        "PAST_CONTENT_2": "Đóng góp vào các hệ thống sẵn sàng sản xuất cho các thị trường quốc tế như Singapore, Malaysia và New Zealand. Chuyên gia về Angular, TypeScript và hệ sinh thái Micro-frontend.",
+        "NOW": "HIỆN TẠI",
+        "NOW_FRONTEND_TITLE": "Chuyên Gia Frontend —",
+        "NOW_FRONTEND_DESC": "Chuyên môn sâu về hệ sinh thái Angular và TypeScript, triển khai các mẫu thiết kế vững chắc như Singleton và MicroFE.",
+        "NOW_PROBLEM_TITLE": "Giải Quyết Vấn Đề —",
+        "NOW_PROBLEM_DESC": "Kỹ năng gỡ lỗi mạnh mẽ để tối ưu hóa hiệu suất giao diện người dùng và hợp lý hóa quy trình làm việc của nhà phát triển.",
+        "NOW_AI_TITLE": "Định Hướng AI —",
+        "NOW_AI_DESC": "Áp dụng các công cụ AI tiên tiến (ChatGPT, Gemini) để tăng năng suất và đẩy nhanh các tác vụ phát triển.",
+        "NOW_COLLAB_TITLE": "Người Cộng Tác —",
+        "NOW_COLLAB_DESC": "Khả năng đã được chứng minh trong việc lãnh đạo và cộng tác giữa các nhóm để đảm bảo giao hàng sản xuất chất lượng cao, đúng hạn."
+    },
+    "MAIN": {
+        "PHILOSOPHY": {
+            "TITLE": "Triết Lý Cốt Lõi",
+            "HIGHLIGHT": "Code dành cho con người, thực thi dành cho máy móc.",
+            "DESC": "> Tôi tin vào Kiến Trúc Sạch và sức mạnh của Micro Frontends để xây dựng các hệ thống không chỉ có khả năng mở rộng mà còn có thể bảo trì trong nhiều năm tới. Mục tiêu của tôi là thu hẹp khoảng cách giữa các thiết kế UI/UX phức tạp và thực tế kỹ thuật hiệu suất cao, đảm bảo mỗi pixel đều phục vụ mục đích và mỗi chức năng chạy với hiệu suất tối ưu."
+        },
+        "PROJECTS": {
+            "TITLE": "Dự Án Đã Tham Gia",
+            "REDOC_TITLE": "🏠 Redoc — Lập trình viên Frontend.",
+            "REDOC_DESC": "Số hóa vòng đời bất động sản thông qua tạo hợp đồng tự động và ký trực tuyến an toàn.",
+            "LOYALTY_TITLE": "🎁 Loyalty — Lập trình viên Frontend/Core/Library.",
+            "LOYALTY_DESC": "Kiến trúc các thành phần web có thể tái sử dụng và luồng xác thực cho các tập đoàn dịch vụ toàn cầu.",
+            "OMSIM_TITLE": "📦 OMSIM — Lập trình viên Frontend (APAC).",
+            "OMSIM_DESC": "Tự động hóa quy trình vận hành cho các đội ngũ bán hàng và chăm sóc khách hàng trên khắp Singapore, Malaysia và New Zealand."
+        },
+        "BUCKET": {
+            "TITLE": "Danh Sách Ước Mơ",
+            "ITEM_1": "Thành thạo tiếng Anh.",
+            "ITEM_2": "Học Backend.",
+            "ITEM_3": "Học Business Analyst.",
+            "ITEM_4": "Làm việc từ xa 100%.",
+            "ITEM_5": "Ra mắt một ứng dụng web.",
+            "ITEM_6": "Khởi nghiệp.",
+            "ITEM_7": "Tự tin nói trước công chúng.",
+            "ITEM_8": "Gặp gỡ 3000 người bạn.",
+            "ITEM_9": "Học thiết kế 3D.",
+            "ITEM_10": "Bán đồ in 3D.",
+            "ITEM_11": "Chơi thể thao.",
+            "ITEM_12": "Thiết lập không gian làm việc mơ ước.",
+            "ITEM_13": "Đầu tư tỷ đồng vào chứng khoán.",
+            "ITEM_14": "Quyên góp 100tr cho VNF.",
+            "ITEM_15": "Viết một bài nhạc rap.",
+            "ITEM_16": "Du lịch Việt Nam.",
+            "ITEM_17": "Chia sẻ khoảnh khắc trên youtube.",
+            "ITEM_18": "Xây nhà.",
+            "ITEM_19": "Giúp đỡ bạn bè.",
+            "ITEM_20": "Làm một bộ phim.",
+            "ITEM_21": "Đi lên mặt trăng.",
+            "ITEM_22": "Gặp bạn 🫵."
+        },
+        "INTERESTS": {
+            "TITLE": "Bản Đồ Sở Thích",
+            "NODES": {
+                "ECONOMY": "Kinh Tế",
+                "DOMAIN": "Lĩnh Vực",
+                "LEISURE": "Giải Trí",
+                "DIY": "DIY",
+                "TECH": "Công Nghệ",
+                "DESIGN": "Thiết Kế",
+                "LIFESTYLE": "Sở Thích"
+            },
+            "ITEMS": {
+                "STOCK": "Chứng Khoán",
+                "CRYPTO": "Tiền Ảo",
+                "GOLD": "Vàng",
+                "SIX_JARS": "6 Chiếc Hũ",
+                "CMS": "CMS",
+                "LOYALTY": "Loyalty",
+                "ECOMMERCE": "Thương Mại Điện Tử",
+                "NEWS_BLOG": "Tin Tức/Blog",
+                "REAL_ESTATE": "Bất Động Sản",
+                "MUSIC": "Nghe Nhạc",
+                "LOL": "Liên Minh Huyền Thoại",
+                "PHOTOGRAPHY": "Chụp Ảnh",
+                "SNIPER_ARCHER": "Sniper/Archer",
+                "COFFEE": "Cà Phê",
+                "3D_PRINTING": "In 3D",
+                "3D_DESIGN": "Thiết Kế 3D",
+                "MAKER_WORLD": "Maker World",
+                "HANDMADE": "Đồ Thủ Công",
+                "WEBAPP": "Ứng Dụng Web",
+                "BLOCKCHAIN": "Blockchain",
+                "AI": "AI",
+                "AR_VR": "AR/VR",
+                "UIUX_DESIGN": "UI/UX",
+                "ANIMATION": "Animation",
+                "GAME_DESIGN": "Game",
+                "FIGMA": "Figma",
+                "ADOBE": "Adobe",
+                "MINIMALISM": "Tối Giản",
+                "RAP": "Rap",
+                "LANDSCAPE": "Phong Cảnh",
+                "DAILY_LIFE": "Đời Sống",
+                "STREET": "Đường Phố",
+                "INDIE_MUSIC": "Nhạc Indie",
+                "ESPORTS": "Thể Thao Điện Tử",
+                "SPORTS": "Thể Thao",
+                "CAT_LOVER": "Mèo 🐈"
+            }
+        },
+        "CONTACT": {
+            "TITLE": "Liên Hệ",
+            "DESC_1": "Tôi giúp bạn xây dựng các sản phẩm có khả năng mở rộng và kiến trúc sạch.",
+            "DESC_2": "Tôi dành 4 giờ \"làm việc sâu\" mỗi ngày để gửi mã chất lượng cao cho MVP của bạn.",
+            "DESC_3_PREFIX": "Quan tâm đến việc làm việc cùng nhau? Hãy lên lịch và gửi cho tôi một",
+            "EMAIL": "Email",
+            "DESC_3_SUFFIX": ". Tôi sẽ mua cà phê."
+        }
+    },
+    "FOOTER": {
+        "ADDRESS": "Phú Quốc, Việt Nam, 2023 - Cuối Vũ Trụ."
+    }
+}
