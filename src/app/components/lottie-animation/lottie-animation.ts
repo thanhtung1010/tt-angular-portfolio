@@ -79,11 +79,11 @@ export class LottieAnimationComponent implements OnInit, OnChanges, AfterViewIni
     constructor() {}
 
     ngOnInit() {
-        this.loadLottie();
+        // this.loadLottie();
     }
 
     ngOnChanges(changes: SimpleChanges): void {
-        if (changes['config'] && this.config) {
+        if (changes['config'] && !changes['config'].firstChange && this.config) {
             this.loadLottie();
         }
     }
@@ -137,14 +137,14 @@ export class LottieAnimationComponent implements OnInit, OnChanges, AfterViewIni
     }
 
     private _setupListener() {
-        this._dotLottie()?.addEventListener("load", this._listenerLoad.bind(this));
-        this._dotLottie()?.addEventListener("loadError", this._listenerLoadError.bind(this));
-        // this._dotLottie()?.addEventListener("render", this._listenerRender.bind(this));
-        this._dotLottie()?.addEventListener("renderError", this._listenerRenderError.bind(this));
-        this._dotLottie()?.addEventListener("ready", this._listenerReady.bind(this));
-        this._dotLottie()?.addEventListener("complete", this._listenerComplete.bind(this));
-        this._dotLottie()?.addEventListener("destroy", this._listenerDestroy.bind(this));
-        this._dotLottie()?.addEventListener("play", this._listenerPlay.bind(this));
+        this._dotLottie()?.addEventListener("load", this._listenerLoad);
+        this._dotLottie()?.addEventListener("loadError", this._listenerLoadError);
+        // this._dotLottie()?.addEventListener("render", this._listenerRender);
+        this._dotLottie()?.addEventListener("renderError", this._listenerRenderError);
+        this._dotLottie()?.addEventListener("ready", this._listenerReady);
+        this._dotLottie()?.addEventListener("complete", this._listenerComplete);
+        this._dotLottie()?.addEventListener("destroy", this._listenerDestroy);
+        this._dotLottie()?.addEventListener("play", this._listenerPlay);
     }
 
     private _removeListener() {
@@ -158,35 +158,35 @@ export class LottieAnimationComponent implements OnInit, OnChanges, AfterViewIni
         this._dotLottie()?.removeEventListener("play", this._listenerPlay);
     }
 
-    private _listenerRender(e: RenderEvent) {
+    private _listenerRender = (e: RenderEvent) => {
         this.renderChange.emit(e);
     }
 
-    private _listenerRenderError(e: RenderErrorEvent) {
+    private _listenerRenderError = (e: RenderErrorEvent) => {
         this.renderErrorChange.emit(e);
     }
 
-    private _listenerLoad(e: LoadEvent) {
+    private _listenerLoad = (e: LoadEvent) => {
         this.loadChange.emit(e);
     }
 
-    private _listenerLoadError(e: LoadErrorEvent) {
+    private _listenerLoadError = (e: LoadErrorEvent) => {
         this.loadErrorChange.emit(e);
     }
 
-    private _listenerReady(e: ReadyEvent) {
+    private _listenerReady = (e: ReadyEvent) => {
         this.readyChange.emit(e);
     }
 
-    private _listenerComplete(e: CompleteEvent) {
+    private _listenerComplete = (e: CompleteEvent) => {
         this.completeChange.emit(e);
     }
 
-    private _listenerDestroy(e: DestroyEvent) {
+    private _listenerDestroy = (e: DestroyEvent) => {
         this.destroyChange.emit(e);
     }
 
-    private _listenerPlay(e: PlayEvent) {
+    private _listenerPlay = (e: PlayEvent) => {
         this.playChange.emit(e);
     }
 

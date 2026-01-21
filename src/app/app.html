@@ -13,6 +13,7 @@
     <lottie-animation
         class="tfe-cat-loading"
         [config]="lottie()"
+        (readyChange)="lottieStartLoad()"
         animate.leave="tfe-leave_slide_y tfe-leave_fade"
         animate.enter="tfe-enter_slide_fade_y"
     ></lottie-animation>

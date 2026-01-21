@@ -15,6 +15,7 @@ import {
     SettingComponent,
 } from '@components';
 import { LayoutService, LanguageService } from '@services';
+import { debounceTime, skip } from 'rxjs';
 
 @Component({
     selector: 'tfe-root',
@@ -28,13 +29,15 @@ import { LayoutService, LanguageService } from '@services';
     ],
 })
 export class App implements AfterViewInit {
-    private readonly _layoutService = inject(LayoutService);
-    private readonly _destroyRef = inject(DestroyRef);
     protected readonly lottie = signal(
         'https://lottie.host/9b524a98-c3d4-415f-b4f3-a79bf4c3d395/b1FArc0UlB.lottie'
     );
     protected loading: WritableSignal<boolean> = signal(true);
+    private _timeoutLoading!: NodeJS.Timeout;
+
+    private readonly _destroyRef = inject(DestroyRef);
     private readonly _languageService = inject(LanguageService);
+    private readonly _layoutService = inject(LayoutService);
 
     constructor() {
         this._languageService.init();
@@ -42,7 +45,11 @@ export class App implements AfterViewInit {
 
     ngAfterViewInit(): void {
         this._layoutService.loading$
-            .pipe(takeUntilDestroyed(this._destroyRef))
+            .pipe(
+                skip(1),
+                takeUntilDestroyed(this._destroyRef),
+                debounceTime(500),
+            )
             .subscribe((resp) => {
                 this.loading.set(resp);
 
@@ -54,10 +61,16 @@ export class App implements AfterViewInit {
         this._layoutService.theme$.pipe(takeUntilDestroyed(this._destroyRef)).subscribe(theme => {
             this._layoutService.updateThemeClass(theme);
         });
+    }
 
-        const _timeout = setTimeout(() => {
+    lottieStartLoad() {
+        if (this._timeoutLoading) {
+            clearTimeout(this._timeoutLoading);
+        }
+
+        this._timeoutLoading = setTimeout(() => {
             this._layoutService.loading$ = !this.loading();
-            clearTimeout(_timeout);
-        }, 2000);
+            clearTimeout(this._timeoutLoading);
+        }, 1500);
     }
 }
