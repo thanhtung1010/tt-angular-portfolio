@@ -6,9 +6,9 @@ import { A_ELEMENT_TARGET } from '@interfaces';
     templateUrl: './url-layout.html',
 })
 export class URLLayoutComponent implements OnInit {
+    @Input({required: true}) href: string = '';
     @Input() type: 'href' | 'download' = 'href';
     @Input() customCls: string = '';
-    @Input() href: string = '';
     @Input() target: A_ELEMENT_TARGET = '_blank';
 
     constructor() {}

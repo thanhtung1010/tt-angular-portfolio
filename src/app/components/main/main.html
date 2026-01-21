@@ -1,17 +1,24 @@
 <section class="tfe-section">
     <h5 class="tfe-section-title">{{ 'MAIN.PHILOSOPHY.TITLE' | translate }}</h5>
-    <p class="tfe-section-paragraph">
-        <span class="text-highlight">{{ 'MAIN.PHILOSOPHY.HIGHLIGHT' | translate }}</span> {{ 'MAIN.PHILOSOPHY.DESC' | translate }}
+    <p class="tfe-section-paragraph" [innerHTML]="'MAIN.PHILOSOPHY.CONTENT' | translate">
     </p>
 </section>
 
 <section class="tfe-section">
     <h5 class="tfe-section-title">{{ 'MAIN.PROJECTS.TITLE' | translate }}</h5>
     <p class="tfe-section-paragraph">
-        <span class="text-highlight">{{ 'MAIN.PROJECTS.REDOC_TITLE' | translate }}</span> {{ 'MAIN.PROJECTS.REDOC_DESC' | translate }}
+        <url-layout [href]="redocHref()">
+            <ng-container hrefContent>
+                <span class="text-link font-semibold">{{ 'MAIN.PROJECTS.REDOC_TITLE' | translate }}</span> 
+            </ng-container>
+        </url-layout> {{ 'MAIN.PROJECTS.REDOC_DESC' | translate }}
     </p>
     <p class="tfe-section-paragraph">
-        <span class="text-highlight">{{ 'MAIN.PROJECTS.LOYALTY_TITLE' | translate }}</span> {{ 'MAIN.PROJECTS.LOYALTY_DESC' | translate }}
+        <url-layout [href]="loyaltyHref()">
+            <ng-container hrefContent>
+                <span class="text-link font-semibold">{{ 'MAIN.PROJECTS.LOYALTY_TITLE' | translate }}</span>
+            </ng-container> 
+        </url-layout> {{ 'MAIN.PROJECTS.LOYALTY_DESC' | translate }}
     </p>
     <p class="tfe-section-paragraph">
         <span class="text-highlight">{{ 'MAIN.PROJECTS.OMSIM_TITLE' | translate }}</span> {{ 'MAIN.PROJECTS.OMSIM_DESC' | translate }}

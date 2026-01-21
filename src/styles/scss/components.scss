@@ -20,7 +20,7 @@
             }
 
             &-highlight_title {
-                @apply block p-2 pr-4 bg-(--bg-color-dark) text-(--bg-color-light) uppercase font-bold;
+                @apply block p-4 bg-(--bg-color-dark) text-(--bg-color-light) uppercase font-bold;
             }
 
             &:has(.tfe-section-highlight_title) {

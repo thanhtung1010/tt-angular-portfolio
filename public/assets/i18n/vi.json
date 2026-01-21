@@ -3,28 +3,25 @@
         "THEME": "Giao diện",
         "LANG": "Ngôn ngữ"
     },
+    "PAGE_TITLE": "TFE - Portfolio | Trịnh Thanh Tùng",
     "HEADER": {
         "NAME": "Trịnh Thanh Tùng",
         "WHO": "Tôi Là",
-        "WHO_CONTENT": "Lập trình viên Web, là người sẽ biến ý tưởng của bạn thành các hệ thống có hiệu suất và khả năng mở rộng cao.",
+        "WHO_CONTENT": "<span class='text-highlight'>Lập trình viên Web</span>, là người sẽ biến ý tưởng của bạn thành các hệ thống có <span class='text-highlight'>hiệu suất và khả năng mở rộng cao</span>.",
         "PAST": "Tôi Có",
-        "PAST_CONTENT_1": "Hơn 4 năm kinh nghiệm xây dựng các ứng dụng web hiện đại với trọng tâm là kiến trúc sạch và tối ưu hóa hiệu suất.",
+        "PAST_CONTENT_1": "Hơn 4 năm kinh nghiệm xây dựng các ứng dụng web hiện đại với trọng tâm là <span class='text-highlight'>kiến trúc sạch</span> và <span class='text-highlight'>tối ưu hóa hiệu suất</span>.",
         "PAST_CONTENT_2": "Đóng góp vào các hệ thống đã được đưa vào hoạt động cho các thị trường quốc tế như Singapore, Malaysia và New Zealand.",
         "NOW": "Hiện Tại",
-        "NOW_FRONTEND_TITLE": "Lập Trình Web —",
-        "NOW_FRONTEND_DESC": "Chuyên sâu về Angular và TypeScript, biến ý tưởng phức tạp thành các giải pháp web hiệu suất cao, kiến trúc sạch và dễ dàng mở rộng.",
-        "NOW_PROBLEM_TITLE": "Giải Quyết Vấn Đề —",
-        "NOW_PROBLEM_DESC": "Kỹ năng gỡ lỗi mạnh mẽ, khả năng tối ưu hóa hiệu suất giao diện người dùng cùng quy trình làm việc rõ ràng.",
-        "NOW_AI_TITLE": "Định Hướng AI —",
-        "NOW_AI_DESC": "Áp dụng các công cụ AI tiên tiến (ChatGPT, Gemini) để tăng năng suất và đẩy nhanh các tác vụ phát triển.",
-        "NOW_COLLAB_TITLE": "Người Cộng Tác —",
-        "NOW_COLLAB_DESC": "Khả năng đã được chứng minh trong việc dẫn dắt và cộng tác cùng các nhóm để đảm bảo sản phẩm đưa đến tay khách hàng chất lượng và đúng hạn."
+        "NOW_FRONTEND": "<span class='text-highlight'>⚡ Lập Trình Web —</span> Chuyên sâu về Angular và TypeScript, biến ý tưởng phức tạp thành các giải pháp web hiệu suất cao, kiến trúc sạch và dễ dàng mở rộng.",
+        "NOW_PROBLEM": "<span class='text-highlight'>🛠️ Giải Quyết Vấn Đề —</span> Kỹ năng sửa lỗi mạnh mẽ, khả năng tối ưu hóa hiệu suất giao diện người dùng cùng quy trình làm việc rõ ràng.",
+        "NOW_AI": "<span class='text-highlight'>🤖 Định Hướng AI —</span> Áp dụng các công cụ AI tiên tiến (ChatGPT, Gemini) để tăng năng suất và đẩy nhanh các tác vụ phát triển.",
+        "NOW_COLLAB": "<span class='text-highlight'>🤝 Người Cộng Tác —</span> Khả năng đã được chứng minh trong việc dẫn dắt và cộng tác cùng các nhóm để đảm bảo sản phẩm đưa đến tay khách hàng chất lượng và đúng hạn.",
+        "NEW_PROD_COMMING": "<span class='text-highlight'>🚀 F____B____ —</span> new product coming soon."
     },
     "MAIN": {
         "PHILOSOPHY": {
             "TITLE": "Quan điểm công việc",
-            "HIGHLIGHT": "Mọi thứ đều bắt đầu từ một dòng code sạch -",
-            "DESC": "Tôi tin rằng những hệ thống lớn đều có thể được xây dựng trên nền tảng của Kiến trúc sạch (Clean Architecture) và tính mô-đun của Micro Frontends. Mục tiêu của tôi là hiện thực hóa những ý tưởng thiết kế UI/UX phức tạp thành các hệ thống kỹ thuật hiệu suất cao, đảm bảo mỗi dòng lệnh đều được tối ưu và mỗi pixel đều mang một giá trị lâu dài."
+            "CONTENT": "<span class='text-highlight'>Mọi thứ đều bắt đầu từ một dòng code sạch -</span> Tôi tin rằng những hệ thống lớn đều có thể được xây dựng trên nền tảng của <span class='text-highlight'>kiến trúc sạch (Clean Architecture)</span> và <span class='text-highlight'>tính mô-đun</span>. Mục tiêu của tôi là <span class='text-highlight'>hiện thực</span> hóa những ý tưởng thiết kế <span class='text-highlight'>UI/UX</span> phức tạp thành các <span class='text-highlight'>hệ thống</span> kỹ thuật hiệu suất cao, đảm bảo mỗi dòng lệnh đều được <span class='text-highlight'>tối ưu</span> và mỗi pixel đều mang một <span class='text-highlight'>giá trị lâu dài</span>."
         },
         "PROJECTS": {
             "TITLE": "Dự Án Đã Tham Gia",
@@ -32,8 +29,8 @@
             "REDOC_DESC": "Số hóa quy trình quản lý vòng đời bất động sản thông qua tự động hóa tạo hợp đồng và ký trực tuyến.",
             "LOYALTY_TITLE": "🎁 Loyalty —",
             "LOYALTY_DESC": "Xây dựng hệ thống quản lý, đặt vé và xác thực người dùng, theo dõi/tích điểm cho các dịch vụ của tập đoàn.",
-            "OMSIM_TITLE": "📦 OMS-IM —",
-            "OMSIM_DESC": "Phát triển giải pháp đặt hàng trực tuyến nhằm tối ưu và tự động hóa quy trình vận hành cho đội ngũ chăm sóc khách hàng, cho phép Nhân viên bán hàng và đại lý quản lý đơn hàng, hàng tồn kho và phê duyệt một cách hiệu quả."
+            "OMSIM_TITLE": "📦 OMS - IM —",
+            "OMSIM_DESC": "Phát triển giải pháp số nhằm tối ưu và tự động hóa quy trình quản lý và vận hành cho đội ngũ chăm sóc khách hàng, cho phép Nhân viên bán hàng và đại lý quản lý đơn hàng, hàng tồn kho và phê duyệt một cách hiệu quả."
         },
         "BUCKET": {
             "TITLE": "Những Điều Muốn Làm",
@@ -114,9 +111,9 @@
             "TITLE": "Liên hệ",
             "DESC_1": "Tôi giúp bạn xây dựng những sản phẩm bền vững với kiến trúc hệ thống chuẩn mực.",
             "DESC_2": "Mỗi ngày, tôi dành riêng 4 giờ \"tập trung sâu\" để mang đến những dòng code chất lượng nhất cho dự án của bạn.",
-            "DESC_3_PREFIX": "Bạn muốn cùng tôi xây dựng điều gì đó? Hãy lên lịch và gửi cho tôi một bản",
+            "DESC_3_PREFIX": "Bạn đang có ý tưởng? Chỉ cần \"chào\" một tiếng vào",
             "EMAIL": "Email",
-            "DESC_3_SUFFIX": ". Tôi sẽ mời cà phê."
+            "DESC_3_SUFFIX": "cho tôi. Tôi sẽ mời cà phê."
         }
     },
     "FOOTER": {

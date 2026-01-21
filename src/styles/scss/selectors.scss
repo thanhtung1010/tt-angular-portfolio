@@ -14,4 +14,8 @@
     theme-toggle {
         @apply inline-block w-fit h-fit;
     }
+
+    url-layout {
+        @apply cursor-pointer;
+    }
 }

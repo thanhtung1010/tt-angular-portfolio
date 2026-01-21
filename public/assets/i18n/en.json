@@ -3,34 +3,31 @@
         "THEME": "Theme",
         "LANG": "Lang"
     },
+    "PAGE_TITLE": "TFE - Portfolio | Trinh Thanh Tung",
     "HEADER": {
         "NAME": "Trinh Thanh Tung",
         "WHO": "Who",
-        "WHO_CONTENT": "Web Developer focused on turning your ideas into high-performing, scalable systems.",
+        "WHO_CONTENT": "<span class='text-highlight'>Web Developer</span>, focused on turning your ideas into <span class='text-highlight'>high-performing and scalable systems</span>.",
         "PAST": "Past",
-        "PAST_CONTENT_1": "Over 4 years of experience building modern web applications with a focus on clean architecture and performance optimization.",
+        "PAST_CONTENT_1": "Over 4 years of experience building modern web applications with a focus on <span class='text-highlight'>clean architecture</span> and <span class='text-highlight'>performance optimization</span>.",
         "PAST_CONTENT_2": "Contributed to production-ready systems for international markets like Singapore, Malaysia, and New Zealand.",
         "NOW": "Now",
-        "NOW_FRONTEND_TITLE": "Web Developer —",
-        "NOW_FRONTEND_DESC": "Expertise in the Angular ecosystem and TypeScript, turning complex ideas into high-performance, scalable web solutions with a focus on clean architecture.",
-        "NOW_PROBLEM_TITLE": "Problem Solver —",
-        "NOW_PROBLEM_DESC": "Strong debugging skills, ability to optimize UI performance and clear workflows.",
-        "NOW_AI_TITLE": "AI-Driven —",
-        "NOW_AI_DESC": "Applying advanced AI tools (ChatGPT, Gemini) to boost productivity and accelerate development tasks.",
-        "NOW_COLLAB_TITLE": "Collaborator —",
-        "NOW_COLLAB_DESC": "Proven ability to lead and collaborate across teams to ensure high-quality, timely production deliveries."
+        "NOW_FRONTEND": "<span class='text-highlight'>⚡ Web Developer —</span> Expertise in the Angular ecosystem and TypeScript, turning complex ideas into high-performance, scalable web solutions with a focus on clean architecture.",
+        "NOW_PROBLEM": "<span class='text-highlight'>🛠️ Problem Solver —</span> Strong debugging skills, ability to optimize UI performance and clear workflows.",
+        "NOW_AI": "<span class='text-highlight'>🤖 AI-Driven —</span> Applying advanced AI tools (ChatGPT, Gemini) to boost productivity and accelerate development tasks.",
+        "NOW_COLLAB": "<span class='text-highlight'>🤝 Collaborator —</span> Proven ability to lead and collaborate across teams to ensure high-quality, timely production deliveries.",
+        "NEW_PROD_COMMING": "<span class='text-highlight'>🚀 F____B____ —</span> new product coming soon."
     },
     "MAIN": {
         "PHILOSOPHY": {
             "TITLE": "Core Philosophy",
-            "HIGHLIGHT": "Everything starts with a single clean line of code -",
-            "DESC": "I believe that even the largest systems can be built on the foundation of Clean Architecture and the modularity of Micro Frontends. My focus is on turning complex UI/UX visions into high-performing technical realities, ensuring every function is optimized and every pixel serves a clear purpose for the long term."
+            "CONTENT": "<span class='text-highlight'>Everything starts with a single clean line of code -</span> I believe that even the largest systems can be built on the foundation of <span class='text-highlight'>Clean Architecture</span> and the <span class='text-highlight'>modularity</span>. My focus is on turning complex <span class='text-highlight'>UI/UX</span> visions into <span class='text-highlight'>high-performing technical realities</span>, ensuring every function is <span class='text-highlight'>optimized</span> and every pixel serves a clear purpose for the <span class='text-highlight'>long term</span>."
         },
         "PROJECTS": {
             "TITLE": "Joined Projects",
             "REDOC_TITLE": "🏠 Redoc —",
             "REDOC_DESC": "Digitalizing the real estate lifecycle through automated contract generation and secure online signing.",
-            "LOYALTY_TITLE": "🎁 Loyalty -",
+            "LOYALTY_TITLE": "🎁 Loyalty —",
             "LOYALTY_DESC": "Built a booking and management system for user authentication and loyalty point tracking within service groups.",
             "OMSIM_TITLE": "📦 OMS-IM —",
             "OMSIM_DESC": "Developed a web ordering solution to optimize and automate operational processes for customer care teams, allowing Sales Reps and customers to manage orders, inventory, and approvals efficiently."
@@ -114,7 +111,7 @@
             "TITLE": "Contact",
             "DESC_1": "I help you build scalable products and clean architectures.",
             "DESC_2": "I dedicate 4 hours of \"deep work\" daily to ship high-quality code for your MVP.",
-            "DESC_3_PREFIX": "Interested in working together? Let's schedule and send me an",
+            "DESC_3_PREFIX": "Interested in working together? Just send \"hi\" to my",
             "EMAIL": "Email",
             "DESC_3_SUFFIX": ". I’ll buy the coffee."
         }

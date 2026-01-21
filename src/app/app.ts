@@ -15,6 +15,8 @@ import {
     SettingComponent,
 } from '@components';
 import { LayoutService, LanguageService } from '@services';
+import { Title } from '@angular/platform-browser';
+import { TranslateService } from '@ngx-translate/core';
 import { debounceTime, skip } from 'rxjs';
 
 @Component({
@@ -38,6 +40,8 @@ export class App implements AfterViewInit {
     private readonly _destroyRef = inject(DestroyRef);
     private readonly _languageService = inject(LanguageService);
     private readonly _layoutService = inject(LayoutService);
+    private readonly _titleService = inject(Title);
+    private readonly _translateService = inject(TranslateService);
 
     constructor() {
         this._languageService.init();
@@ -60,6 +64,10 @@ export class App implements AfterViewInit {
 
         this._layoutService.theme$.pipe(takeUntilDestroyed(this._destroyRef)).subscribe(theme => {
             this._layoutService.updateThemeClass(theme);
+        });
+
+        this._translateService.stream('PAGE_TITLE').pipe(takeUntilDestroyed(this._destroyRef)).subscribe((title: string) => {
+            this._titleService.setTitle(title);
         });
     }
 

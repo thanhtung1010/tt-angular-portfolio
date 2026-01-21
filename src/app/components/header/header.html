@@ -5,13 +5,11 @@
 <section class="tfe-intro">
     <section class="left">
         <article class="tfe-intro-article" [attr.title-content]="'HEADER.WHO' | translate">
-            <p class="tfe-intro-article-content">
-                {{ 'HEADER.WHO_CONTENT' | translate }}
+            <p class="tfe-intro-article-content" [innerHTML]="'HEADER.WHO_CONTENT' | translate">
             </p>
         </article>
         <article class="tfe-intro-article" [attr.title-content]="'HEADER.PAST' | translate">
-            <p class="tfe-intro-article-content">
-                {{ 'HEADER.PAST_CONTENT_1' | translate }}
+            <p class="tfe-intro-article-content" [innerHTML]="'HEADER.PAST_CONTENT_1' | translate">
             </p>
             <p class="tfe-intro-article-content">
                 {{ 'HEADER.PAST_CONTENT_2' | translate }}
@@ -20,18 +18,11 @@
     </section>
     <section class="right">
         <article class="tfe-intro-article" [attr.title-content]="'HEADER.NOW' | translate">
-            <p class="tfe-intro-article-content">
-                <span class="text-highlight">{{ 'HEADER.NOW_FRONTEND_TITLE' | translate }}</span> {{ 'HEADER.NOW_FRONTEND_DESC' | translate }}
-            </p>
-            <p class="tfe-intro-article-content">
-                <span class="text-highlight">{{ 'HEADER.NOW_PROBLEM_TITLE' | translate }}</span> {{ 'HEADER.NOW_PROBLEM_DESC' | translate }}
-            </p>
-            <p class="tfe-intro-article-content">
-                <span class="text-highlight">{{ 'HEADER.NOW_AI_TITLE' | translate }}</span> {{ 'HEADER.NOW_AI_DESC' | translate }}
-            </p>
-            <p class="tfe-intro-article-content">
-                <span class="text-highlight">{{ 'HEADER.NOW_COLLAB_TITLE' | translate }}</span> {{ 'HEADER.NOW_COLLAB_DESC' | translate }}
-            </p>
+            <p class="tfe-intro-article-content" [innerHTML]="'HEADER.NOW_FRONTEND' | translate"></p>
+            <p class="tfe-intro-article-content" [innerHTML]="'HEADER.NOW_PROBLEM' | translate"></p>
+            <p class="tfe-intro-article-content" [innerHTML]="'HEADER.NOW_AI' | translate"></p>
+            <p class="tfe-intro-article-content" [innerHTML]="'HEADER.NOW_COLLAB' | translate"></p>
+            <p class="tfe-intro-article-content" [innerHTML]="'HEADER.NEW_PROD_COMMING' | translate"></p>
         </article>
     </section>
 </section>
