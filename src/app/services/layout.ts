@@ -41,6 +41,7 @@ export class LayoutService {
     }
     private readonly _theme$: BehaviorSubject<THEME_ENUM> = new BehaviorSubject(DEFAULT_THEME);
 
+    /**@var isThemeDefault is light theme */
     readonly isThemeDefault = signal(true);
 
     get isBrowser(): WritableSignal<boolean> {
@@ -60,9 +61,9 @@ export class LayoutService {
     }
 
     updateThemeClass(theme: THEME_ENUM) {
-        this._updateBodyClass(THEME_ENUM.LIGHT, 'remove');
-        this._updateBodyClass(THEME_ENUM.DARK, 'remove');
-        this._updateBodyClass(theme, 'add');
+        this._updateHtmlClass(THEME_ENUM.LIGHT, 'remove');
+        this._updateHtmlClass(THEME_ENUM.DARK, 'remove');
+        this._updateHtmlClass(theme, 'add');
     }
 
     private _updateBodyClass(cls: string, action: 'add' | 'remove') {
@@ -73,6 +74,19 @@ export class LayoutService {
                     body.classList.add(cls);
                 } else {
                     body.classList.remove(cls);
+                }
+            }
+        }
+    }
+
+    private _updateHtmlClass(cls: string, action: 'add' | 'remove') {
+        if (this._isBrowser()) {
+            const html = document.documentElement;
+            if (html) {
+                if (action === 'add') {
+                    html.classList.add(cls);
+                } else {
+                    html.classList.remove(cls);
                 }
             }
         }

@@ -5,16 +5,16 @@
     },
     "HEADER": {
         "NAME": "Trinh Thanh Tung",
-        "WHO": "WHO",
-        "WHO_CONTENT": "Web Developer focused on turning your ideas into high-performing, scalable systems. Currently building digital transformation tools.",
-        "PAST": "PAST",
+        "WHO": "Who",
+        "WHO_CONTENT": "Web Developer focused on turning your ideas into high-performing, scalable systems.",
+        "PAST": "Past",
         "PAST_CONTENT_1": "Over 4 years of experience building modern web applications with a focus on clean architecture and performance optimization.",
-        "PAST_CONTENT_2": "Contributed to production-ready systems for international markets like Singapore, Malaysia, and New Zealand. Expert in Angular, TypeScript, and Micro-frontend ecosystems.",
-        "NOW": "NOW",
-        "NOW_FRONTEND_TITLE": "Frontend Expert —",
-        "NOW_FRONTEND_DESC": "Expertise in the Angular ecosystem and TypeScript, implementing solid design patterns like Singleton and MicroFE.",
+        "PAST_CONTENT_2": "Contributed to production-ready systems for international markets like Singapore, Malaysia, and New Zealand.",
+        "NOW": "Now",
+        "NOW_FRONTEND_TITLE": "Web Developer —",
+        "NOW_FRONTEND_DESC": "Expertise in the Angular ecosystem and TypeScript, turning complex ideas into high-performance, scalable web solutions with a focus on clean architecture.",
         "NOW_PROBLEM_TITLE": "Problem Solver —",
-        "NOW_PROBLEM_DESC": "Strong debugging skills to optimize UI performance and streamline developer workflows.",
+        "NOW_PROBLEM_DESC": "Strong debugging skills, ability to optimize UI performance and clear workflows.",
         "NOW_AI_TITLE": "AI-Driven —",
         "NOW_AI_DESC": "Applying advanced AI tools (ChatGPT, Gemini) to boost productivity and accelerate development tasks.",
         "NOW_COLLAB_TITLE": "Collaborator —",
@@ -23,17 +23,17 @@
     "MAIN": {
         "PHILOSOPHY": {
             "TITLE": "Core Philosophy",
-            "HIGHLIGHT": "Code is for humans, execution is for machines.",
-            "DESC": "> I believe in Clean Architecture and the power of Micro Frontends to build systems that aren't just scalable, but maintainable for years to come. My goal is to bridge the gap between complex UI/UX designs and high-performing technical reality, ensuring every pixel serves a purpose and every function runs with optimal performance."
+            "HIGHLIGHT": "Everything starts with a single clean line of code -",
+            "DESC": "I believe that even the largest systems can be built on the foundation of Clean Architecture and the modularity of Micro Frontends. My focus is on turning complex UI/UX visions into high-performing technical realities, ensuring every function is optimized and every pixel serves a clear purpose for the long term."
         },
         "PROJECTS": {
             "TITLE": "Joined Projects",
-            "REDOC_TITLE": "🏠 Redoc — Frontend Developer.",
+            "REDOC_TITLE": "🏠 Redoc —",
             "REDOC_DESC": "Digitalizing the real estate lifecycle through automated contract generation and secure online signing.",
-            "LOYALTY_TITLE": "🎁 Loyalty — Core & Library Developer.",
-            "LOYALTY_DESC": "Architecting reusable web components and authentication flows for global service groups.",
-            "OMSIM_TITLE": "📦 OMSIM — Frontend Developer (APAC).",
-            "OMSIM_DESC": "Automating operational workflows for sales and customer care teams across Singapore, Malaysia, and New Zealand."
+            "LOYALTY_TITLE": "🎁 Loyalty -",
+            "LOYALTY_DESC": "Built a booking and management system for user authentication and loyalty point tracking within service groups.",
+            "OMSIM_TITLE": "📦 OMS-IM —",
+            "OMSIM_DESC": "Developed a web ordering solution to optimize and automate operational processes for customer care teams, allowing Sales Reps and customers to manage orders, inventory, and approvals efficiently."
         },
         "BUCKET": {
             "TITLE": "Bucket List",
@@ -43,17 +43,17 @@
             "ITEM_4": "Go 100% remote.",
             "ITEM_5": "Ship a webapp.",
             "ITEM_6": "Launch a startup.",
-            "ITEM_7": "Confident in public speaking.",
+            "ITEM_7": "Master public speaking.",
             "ITEM_8": "Meet 3000 friends.",
             "ITEM_9": "Learn 3D design.",
             "ITEM_10": "Sell 3D prints.",
             "ITEM_11": "Play sports.",
-            "ITEM_12": "Setup dream workspace.",
+            "ITEM_12": "Set up dream workspace.",
             "ITEM_13": "Invest billion in stocks.",
             "ITEM_14": "Donate 100m to VNF.",
             "ITEM_15": "Write a rap song.",
             "ITEM_16": "Travel Vietnam.",
-            "ITEM_17": "Share moment on youtube.",
+            "ITEM_17": "Share moments on Youtube.",
             "ITEM_18": "Build a house.",
             "ITEM_19": "Help friends.",
             "ITEM_20": "Make a movie.",
@@ -120,6 +120,6 @@
         }
     },
     "FOOTER": {
-        "ADDRESS": "Phu Quoc, Viet Nam, 2023 - End of Universe."
+        "ADDRESS": "Phu Quoc, Viet Nam, 2023 - End of the Universe."
     }
 }

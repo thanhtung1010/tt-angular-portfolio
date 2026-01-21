@@ -13,14 +13,14 @@
         }
 
         &-section {
-            @apply relative border-t py-5;
+            @apply relative border-t border-(--border-color) py-5;
 
             &-title {
                 @apply block w-fit p-2 pr-4 bg-(--bg-color) text-(--text-color-lighter) uppercase font-bold absolute top-0 left-0 right-0 -translate-y-1/2;
             }
 
             &-highlight_title {
-                @apply block p-2 pr-4 bg-gray-900 text-white uppercase font-bold;
+                @apply block p-2 pr-4 bg-(--bg-color-dark) text-(--bg-color-light) uppercase font-bold;
             }
 
             &:has(.tfe-section-highlight_title) {
@@ -48,11 +48,11 @@
             }
 
             &-article:last-child {
-                @apply mb-0;
+                @apply mb-0 min-h-12;
             }
 
             &-article::before {
-                @apply content-[attr(title-content)] uppercase border-r h-full absolute top-0 left-0  text-(--text-color-lighter) text-end font-bold;
+                @apply content-[attr(title-content)] uppercase border-r h-full absolute top-0 left-0  text-(--text-color-lighter) text-end font-bold text-nowrap;
                 writing-mode: sideways-lr;
             }
         }
@@ -81,11 +81,11 @@
             }
 
             &-button {
-                @apply relative w-full h-full bg-transparent cursor-pointer border-4 border-gray-500 rounded-4xl z-2;
+                @apply relative w-full h-full bg-(--bg-color-light) cursor-pointer border-4 border-(--border-color) rounded-4xl z-2;
             }
 
             &-menu {
-                @apply absolute bottom-0 right-0 z-1 border-4 w-40 h-50 overflow-y-auto overflow-x-hidden border-gray-500 rounded-4xl bg-(--bg-color) p-3;
+                @apply absolute bottom-0 right-0 z-1 border-4 w-40 h-50 overflow-y-auto overflow-x-hidden border-(--border-color) rounded-4xl bg-(--bg-color) p-3;
             }
 
             &-item {

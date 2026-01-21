@@ -1,10 +1,12 @@
-import { Component, DestroyRef, ElementRef, inject, OnInit, ViewChild } from '@angular/core';
-import { LayoutService } from '@services';
+import { Component, DestroyRef, ElementRef, inject, OnInit, signal, ViewChild } from '@angular/core';
+import { LayoutService, SvgLoaderService } from '@services';
 import * as d3 from 'd3';
-import { CATEGORY_COLORS, INTERESTS_DATA } from '@data';
+import { CATEGORY_COLORS, CATEGORY_COLORS_DARK, INTERESTS_DATA } from '@data';
 import { InterestNode } from '@interfaces';
 import { TranslateService } from '@ngx-translate/core';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
+import { THEME_ENUM } from '@enums';
+import { merge } from 'rxjs';
 
 @Component({
     selector: 'interests-map',
@@ -13,7 +15,11 @@ import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 export class InterestsMapComponent implements OnInit {
     @ViewChild('interestMap', { static: true }) interestMap!: ElementRef<HTMLElement>;
 
+    protected readonly me = signal('assets/svg/me.svg').asReadonly();
+    protected readonly meDark = signal('assets/svg/me-dark.svg').asReadonly();
+
     private readonly _layoutService: LayoutService = inject(LayoutService);
+    private readonly _svgService: SvgLoaderService = inject(SvgLoaderService);
     private readonly _translateService = inject(TranslateService);
     private readonly _destroyRef = inject(DestroyRef);
 
@@ -21,20 +27,26 @@ export class InterestsMapComponent implements OnInit {
 
     ngOnInit() {
         if (this._layoutService.isBrowser()) {
-            this._translateService.onLangChange
-                .pipe(takeUntilDestroyed(this._destroyRef))
-                .subscribe(() => {
-                    this.createGraph();
-                });
-            
-            // Initial render if language is already set, or default
-            this.createGraph();
+            merge(
+                this._translateService.onLangChange,
+                this._layoutService.theme$
+            )
+            .pipe(takeUntilDestroyed(this._destroyRef))
+            .subscribe(() => {
+                this.createGraph();
+            });
         }
     }
 
     createGraph() {
         const width = 888;
         const height = 696;
+        const isDark = this._layoutService.theme$.value === THEME_ENUM.DARK;
+        const colors = isDark ? CATEGORY_COLORS_DARK : CATEGORY_COLORS;
+        const baseStroke = isDark ? '#374151' : '#e0e0e0'; // gray-700 : gray-300
+        const activeStroke = isDark ? '#4b5563' : '#e8e8e8'; // gray-600 : gray-200
+        const textColor = isDark ? '#F5F5F5' : '#00000080'; // gray-300 : #666
+        const rootImg = isDark ? this.meDark() : this.me();
         
         // Clear previous if any
         d3.select(this.interestMap.nativeElement).select('svg').remove();
@@ -61,7 +73,7 @@ export class InterestsMapComponent implements OnInit {
             .append('circle')
             .attr('r', d => d)
             .attr('fill', 'none')
-            .attr('stroke', '#e0e0e0')
+            .attr('stroke', baseStroke)
             .attr('stroke-width', 1)
             .each(function(d, i) {
                 const circle = d3.select(this);
@@ -71,15 +83,15 @@ export class InterestsMapComponent implements OnInit {
                         circle.transition()
                             .duration(5000)
                             .attr('stroke-width', 1)
-                            .attr("stroke", "#e8e8e8")
+                            .attr("stroke", activeStroke)
                             .transition()
                             .duration(1000)
                             .attr('stroke-width', 1.5)
-                            .attr("stroke", "#e0e0e0")
+                            .attr("stroke", baseStroke)
                             .transition()
                             .duration(1000)
                             .attr('stroke-width', 1)
-                            .attr("stroke", "#e8e8e8")
+                            .attr("stroke", activeStroke)
                             .on("end", repeat);
                     })();
                 }, i * 200); 
@@ -146,7 +158,7 @@ export class InterestsMapComponent implements OnInit {
             .append('line')
             .attr('stroke', (d: any) => {
                 const targetGroup = (d.target as InterestNode).group;
-                return CATEGORY_COLORS[targetGroup] || '#ccc';
+                return colors[targetGroup] || '#ccc';
             })
             .attr('stroke-width', 1.5)
             .attr('opacity', 0.7);
@@ -171,7 +183,7 @@ export class InterestsMapComponent implements OnInit {
                 // Formula: 5 - depth
                 return Math.max(2, 5 - depth); 
             })
-            .attr('fill', (d: any) => CATEGORY_COLORS[d.group] || '#ccc');
+            .attr('fill', (d: any) => colors[d.group] || '#ccc');
 
         // Root Node (Image)
         const rootNode = node.filter((d: any) => d.type === 'root');
@@ -187,7 +199,7 @@ export class InterestsMapComponent implements OnInit {
         // User requested "match UI picture". 
         // I'll add an image element but point to a placeholder.
         rootNode.append('image')
-            .attr('href', 'assets/svg/me.svg') // Assumption: user might add this later
+            .attr('href', rootImg)
             .attr('width', 100)
             .attr('height', 100)
             .attr('x', -50)
@@ -197,7 +209,7 @@ export class InterestsMapComponent implements OnInit {
         node.append('text')
             .text((d: any) => d.type === 'root' ? '' : this._translateService.instant(d.label))
             .attr('font-size', '10px')
-            .attr('fill', '#666')
+            .attr('fill', textColor)
             .attr('dx', 8)
             .attr('dy', 4)
             // .style('pointer-events', 'none')
@@ -258,7 +270,7 @@ export class InterestsMapComponent implements OnInit {
                 .append('circle')
                 .attr('class', 'glow')
                 .attr('r', 0)
-                .attr('fill', (n: any) => CATEGORY_COLORS[n.group])
+                .attr('fill', (n: any) => colors[n.group])
                 .attr('opacity', .07)
                 .attr('cx', (n: any) => n.x)
                 .attr('cy', (n: any) => n.y)

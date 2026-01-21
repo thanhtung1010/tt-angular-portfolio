@@ -5,63 +5,63 @@
     },
     "HEADER": {
         "NAME": "Trịnh Thanh Tùng",
-        "WHO": "LÀ AI",
-        "WHO_CONTENT": "Lập trình viên Web tập trung vào biến ý tưởng của bạn thành các hệ thống hiệu suất cao, có khả năng mở rộng. Hiện đang xây dựng các công cụ chuyển đổi số.",
-        "PAST": "ĐÃ LÀM",
+        "WHO": "Tôi Là",
+        "WHO_CONTENT": "Lập trình viên Web, là người sẽ biến ý tưởng của bạn thành các hệ thống có hiệu suất và khả năng mở rộng cao.",
+        "PAST": "Tôi Có",
         "PAST_CONTENT_1": "Hơn 4 năm kinh nghiệm xây dựng các ứng dụng web hiện đại với trọng tâm là kiến trúc sạch và tối ưu hóa hiệu suất.",
-        "PAST_CONTENT_2": "Đóng góp vào các hệ thống sẵn sàng sản xuất cho các thị trường quốc tế như Singapore, Malaysia và New Zealand. Chuyên gia về Angular, TypeScript và hệ sinh thái Micro-frontend.",
-        "NOW": "HIỆN TẠI",
-        "NOW_FRONTEND_TITLE": "Chuyên Gia Frontend —",
-        "NOW_FRONTEND_DESC": "Chuyên môn sâu về hệ sinh thái Angular và TypeScript, triển khai các mẫu thiết kế vững chắc như Singleton và MicroFE.",
+        "PAST_CONTENT_2": "Đóng góp vào các hệ thống đã được đưa vào hoạt động cho các thị trường quốc tế như Singapore, Malaysia và New Zealand.",
+        "NOW": "Hiện Tại",
+        "NOW_FRONTEND_TITLE": "Lập Trình Web —",
+        "NOW_FRONTEND_DESC": "Chuyên sâu về Angular và TypeScript, biến ý tưởng phức tạp thành các giải pháp web hiệu suất cao, kiến trúc sạch và dễ dàng mở rộng.",
         "NOW_PROBLEM_TITLE": "Giải Quyết Vấn Đề —",
-        "NOW_PROBLEM_DESC": "Kỹ năng gỡ lỗi mạnh mẽ để tối ưu hóa hiệu suất giao diện người dùng và hợp lý hóa quy trình làm việc của nhà phát triển.",
+        "NOW_PROBLEM_DESC": "Kỹ năng gỡ lỗi mạnh mẽ, khả năng tối ưu hóa hiệu suất giao diện người dùng cùng quy trình làm việc rõ ràng.",
         "NOW_AI_TITLE": "Định Hướng AI —",
         "NOW_AI_DESC": "Áp dụng các công cụ AI tiên tiến (ChatGPT, Gemini) để tăng năng suất và đẩy nhanh các tác vụ phát triển.",
         "NOW_COLLAB_TITLE": "Người Cộng Tác —",
-        "NOW_COLLAB_DESC": "Khả năng đã được chứng minh trong việc lãnh đạo và cộng tác giữa các nhóm để đảm bảo giao hàng sản xuất chất lượng cao, đúng hạn."
+        "NOW_COLLAB_DESC": "Khả năng đã được chứng minh trong việc dẫn dắt và cộng tác cùng các nhóm để đảm bảo sản phẩm đưa đến tay khách hàng chất lượng và đúng hạn."
     },
     "MAIN": {
         "PHILOSOPHY": {
-            "TITLE": "Triết Lý Cốt Lõi",
-            "HIGHLIGHT": "Code dành cho con người, thực thi dành cho máy móc.",
-            "DESC": "> Tôi tin vào Kiến Trúc Sạch và sức mạnh của Micro Frontends để xây dựng các hệ thống không chỉ có khả năng mở rộng mà còn có thể bảo trì trong nhiều năm tới. Mục tiêu của tôi là thu hẹp khoảng cách giữa các thiết kế UI/UX phức tạp và thực tế kỹ thuật hiệu suất cao, đảm bảo mỗi pixel đều phục vụ mục đích và mỗi chức năng chạy với hiệu suất tối ưu."
+            "TITLE": "Quan điểm công việc",
+            "HIGHLIGHT": "Mọi thứ đều bắt đầu từ một dòng code sạch -",
+            "DESC": "Tôi tin rằng những hệ thống lớn đều có thể được xây dựng trên nền tảng của Kiến trúc sạch (Clean Architecture) và tính mô-đun của Micro Frontends. Mục tiêu của tôi là hiện thực hóa những ý tưởng thiết kế UI/UX phức tạp thành các hệ thống kỹ thuật hiệu suất cao, đảm bảo mỗi dòng lệnh đều được tối ưu và mỗi pixel đều mang một giá trị lâu dài."
         },
         "PROJECTS": {
             "TITLE": "Dự Án Đã Tham Gia",
-            "REDOC_TITLE": "🏠 Redoc — Lập trình viên Frontend.",
-            "REDOC_DESC": "Số hóa vòng đời bất động sản thông qua tạo hợp đồng tự động và ký trực tuyến an toàn.",
-            "LOYALTY_TITLE": "🎁 Loyalty — Lập trình viên Frontend/Core/Library.",
-            "LOYALTY_DESC": "Kiến trúc các thành phần web có thể tái sử dụng và luồng xác thực cho các tập đoàn dịch vụ toàn cầu.",
-            "OMSIM_TITLE": "📦 OMSIM — Lập trình viên Frontend (APAC).",
-            "OMSIM_DESC": "Tự động hóa quy trình vận hành cho các đội ngũ bán hàng và chăm sóc khách hàng trên khắp Singapore, Malaysia và New Zealand."
+            "REDOC_TITLE": "🏠 Redoc —",
+            "REDOC_DESC": "Số hóa quy trình quản lý vòng đời bất động sản thông qua tự động hóa tạo hợp đồng và ký trực tuyến.",
+            "LOYALTY_TITLE": "🎁 Loyalty —",
+            "LOYALTY_DESC": "Xây dựng hệ thống quản lý, đặt vé và xác thực người dùng, theo dõi/tích điểm cho các dịch vụ của tập đoàn.",
+            "OMSIM_TITLE": "📦 OMS-IM —",
+            "OMSIM_DESC": "Phát triển giải pháp đặt hàng trực tuyến nhằm tối ưu và tự động hóa quy trình vận hành cho đội ngũ chăm sóc khách hàng, cho phép Nhân viên bán hàng và đại lý quản lý đơn hàng, hàng tồn kho và phê duyệt một cách hiệu quả."
         },
         "BUCKET": {
-            "TITLE": "Danh Sách Ước Mơ",
+            "TITLE": "Những Điều Muốn Làm",
             "ITEM_1": "Thành thạo tiếng Anh.",
             "ITEM_2": "Học Backend.",
             "ITEM_3": "Học Business Analyst.",
             "ITEM_4": "Làm việc từ xa 100%.",
             "ITEM_5": "Ra mắt một ứng dụng web.",
             "ITEM_6": "Khởi nghiệp.",
-            "ITEM_7": "Tự tin nói trước công chúng.",
+            "ITEM_7": "Tự tin nói trước đám đông.",
             "ITEM_8": "Gặp gỡ 3000 người bạn.",
             "ITEM_9": "Học thiết kế 3D.",
             "ITEM_10": "Bán đồ in 3D.",
             "ITEM_11": "Chơi thể thao.",
-            "ITEM_12": "Thiết lập không gian làm việc mơ ước.",
+            "ITEM_12": "Decor góc làm việc mơ ước.",
             "ITEM_13": "Đầu tư tỷ đồng vào chứng khoán.",
-            "ITEM_14": "Quyên góp 100tr cho VNF.",
-            "ITEM_15": "Viết một bài nhạc rap.",
-            "ITEM_16": "Du lịch Việt Nam.",
-            "ITEM_17": "Chia sẻ khoảnh khắc trên youtube.",
+            "ITEM_14": "Quyên góp 100 triệu cho VNF.",
+            "ITEM_15": "Viết một bài rap.",
+            "ITEM_16": "Đi khắp Việt Nam.",
+            "ITEM_17": "Chia sẻ mọi thứ lên Youtube.",
             "ITEM_18": "Xây nhà.",
             "ITEM_19": "Giúp đỡ bạn bè.",
             "ITEM_20": "Làm một bộ phim.",
-            "ITEM_21": "Đi lên mặt trăng.",
+            "ITEM_21": "Lên mặt trăng.",
             "ITEM_22": "Gặp bạn 🫵."
         },
         "INTERESTS": {
-            "TITLE": "Bản Đồ Sở Thích",
+            "TITLE": "Hệ sinh thái cá nhân",
             "NODES": {
                 "ECONOMY": "Kinh Tế",
                 "DOMAIN": "Lĩnh Vực",
@@ -111,15 +111,15 @@
             }
         },
         "CONTACT": {
-            "TITLE": "Liên Hệ",
-            "DESC_1": "Tôi giúp bạn xây dựng các sản phẩm có khả năng mở rộng và kiến trúc sạch.",
-            "DESC_2": "Tôi dành 4 giờ \"làm việc sâu\" mỗi ngày để gửi mã chất lượng cao cho MVP của bạn.",
-            "DESC_3_PREFIX": "Quan tâm đến việc làm việc cùng nhau? Hãy lên lịch và gửi cho tôi một",
+            "TITLE": "Liên hệ",
+            "DESC_1": "Tôi giúp bạn xây dựng những sản phẩm bền vững với kiến trúc hệ thống chuẩn mực.",
+            "DESC_2": "Mỗi ngày, tôi dành riêng 4 giờ \"tập trung sâu\" để mang đến những dòng code chất lượng nhất cho dự án của bạn.",
+            "DESC_3_PREFIX": "Bạn muốn cùng tôi xây dựng điều gì đó? Hãy lên lịch và gửi cho tôi một bản",
             "EMAIL": "Email",
-            "DESC_3_SUFFIX": ". Tôi sẽ mua cà phê."
+            "DESC_3_SUFFIX": ". Tôi sẽ mời cà phê."
         }
     },
     "FOOTER": {
-        "ADDRESS": "Phú Quốc, Việt Nam, 2023 - Cuối Vũ Trụ."
+        "ADDRESS": "Phú Quốc, Việt Nam, 2023 - ∞."
     }
 }

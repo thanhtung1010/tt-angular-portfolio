@@ -136,3 +136,14 @@ export const CATEGORY_COLORS: Record<string, string> = {
     lifestyle: '#ff5c5c',  // Red
     root: '#ffffff'
 };
+
+export const CATEGORY_COLORS_DARK: Record<string, string> = {
+    economy: '#60a5fa',    // Lighter Blue
+    domain: '#fbbf24',     // Lighter Orange
+    leisure: '#34d399',    // Lighter Green
+    diy: '#2dd4bf',        // Lighter Teal
+    tech: '#c084fc',       // Lighter Purple
+    design: '#f472b6',     // Lighter Pink
+    lifestyle: '#f87171',  // Lighter Red
+    root: '#1f2937'        // Dark gray for root if needed
+};
