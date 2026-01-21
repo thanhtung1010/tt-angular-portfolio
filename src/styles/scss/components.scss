@@ -36,7 +36,7 @@
             @apply grid grid-cols-1 md:grid-cols-2 gap-4 mt-4;
 
             &-article {
-                @apply relative mb-4;
+                @apply relative mb-4 min-h-12;
 
                 &-content {
                     @apply ml-8! mb-2!;
@@ -48,7 +48,7 @@
             }
 
             &-article:last-child {
-                @apply mb-0 min-h-12;
+                @apply mb-0;
             }
 
             &-article::before {

@@ -1,8 +1,10 @@
 import { isPlatformBrowser } from "@angular/common";
-import { Inject, Injectable, PLATFORM_ID, signal, WritableSignal } from "@angular/core";
+import { inject, Inject, Injectable, PLATFORM_ID, signal, WritableSignal } from "@angular/core";
 import { BehaviorSubject } from "rxjs";
 import { THEME_ENUM } from "@enums";
 import { DEFAULT_THEME } from "@data";
+import { COOKIE_THEME } from "@data";
+import { CookieService } from "./cookie";
 
 @Injectable({
     providedIn: 'any'
@@ -56,8 +58,22 @@ export class LayoutService {
 
     private readonly _hiddenClass: string = 'tfe-hidden-scroll';
 
-    constructor(@Inject(PLATFORM_ID) private platformId: Object) {
-        this.isBrowser.set(isPlatformBrowser(this.platformId));
+    private readonly _cookieService = inject(CookieService);
+
+    constructor() {
+        this.isBrowser.set(this._cookieService.isBrowser());
+        this._initTheme();
+    }
+
+    private _initTheme() {
+        if (this._isBrowser()) {
+            const theme = this._cookieService.get(COOKIE_THEME) as THEME_ENUM;
+            if (theme) {
+                this.theme$ = theme;
+                this.isThemeDefault.set(theme === THEME_ENUM.LIGHT);
+                this.updateThemeClass(theme);
+            }
+        }
     }
 
     updateThemeClass(theme: THEME_ENUM) {
@@ -116,5 +132,6 @@ export class LayoutService {
         const next = current === THEME_ENUM.LIGHT ? THEME_ENUM.DARK : THEME_ENUM.LIGHT;
         this.theme$ = next;
         this.isThemeDefault.set(next === THEME_ENUM.LIGHT);
+        this._cookieService.set(COOKIE_THEME, next);
     }
 }

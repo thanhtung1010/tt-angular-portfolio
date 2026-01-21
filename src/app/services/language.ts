@@ -2,12 +2,15 @@ import { Injectable, WritableSignal, inject, signal } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 import { LANGUAGE_ENUM } from '@enums';
 import { BehaviorSubject } from 'rxjs';
+import { COOKIE_LANG } from '@data';
+import { CookieService } from './cookie';
 
 @Injectable({
     providedIn: 'root'
 })
 export class LanguageService {
     private readonly _translateService = inject(TranslateService);
+    private readonly _cookieService = inject(CookieService);
 
     get lang$(): BehaviorSubject<LANGUAGE_ENUM> {
         return this._lang$;
@@ -31,8 +34,12 @@ export class LanguageService {
     init() {
         this._translateService.addLangs([LANGUAGE_ENUM.EN, LANGUAGE_ENUM.VI]);
         this._translateService.setFallbackLang(LANGUAGE_ENUM.EN);
+        
+        const cookieLang = this._cookieService.get(COOKIE_LANG);
         const browserLang = this._translateService.getBrowserLang();
-        const lang = this._checkLang(browserLang);
+        const langToCheck = cookieLang || browserLang;
+        
+        const lang = this._checkLang(langToCheck);
         this._changeLang(lang);
     }
 
@@ -46,6 +53,7 @@ export class LanguageService {
         this.lang$ = lang;
         this.isVI.set(lang === LANGUAGE_ENUM.VI);
         this.isEN.set(lang === LANGUAGE_ENUM.EN);
+        this._cookieService.set(COOKIE_LANG, lang);
     }
 
     private _checkLang(lang: string | undefined) {
