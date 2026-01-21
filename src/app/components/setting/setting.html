@@ -1,6 +1,7 @@
 <section class="tfe-setting-wrapper">
     @if (visibleSetting()) {
         <section
+            #settingMenu
             class="tfe-setting-menu [&>.tfe-setting-item]:last:mb-0"
             animate.leave="tfe-menu_leave"
             animate.enter="tfe-menu_enter"
@@ -18,7 +19,7 @@
             </div>
         </section>
     }
-    <button class="tfe-setting-button" (click)="toggleExpandSetting()">
+    <button #settingBtn class="tfe-setting-button" (click)="toggleExpandSetting()">
         <lottie-animation #rollingCat class="absolute z-2 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" width="40"
             height="40" [config]="lottie()"></lottie-animation>
     </button>
