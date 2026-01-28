@@ -27,6 +27,7 @@ A high-performance, single-page Portfolio Landing Page for a Web Developer, buil
 ## 📂 Project Structure
 
 ```bash
+public/  
 src/
 ├── app/
 │   ├── components/       # Standalone UI components (Header, Footer, Main, etc.)
@@ -34,8 +35,7 @@ src/
 │   ├── services/         # Core application logic (Language, Layout, Cookies)
 │   ├── interfaces/       # TypeScript interfaces
 │   ├── app.ts            # Root application component
-│   └── ...
-├── public/               # Static assets (Images, Fonts, Icons)
+│   └── ...             # Static assets (Images, Fonts, Icons)
 └── styles/               # Global styles and Tailwind configuration
 ```
 

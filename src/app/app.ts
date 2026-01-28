@@ -14,7 +14,7 @@ import {
     MainComponent,
     SettingComponent,
 } from '@components';
-import { LayoutService, LanguageService } from '@services';
+import { LayoutService, LanguageService, ConsoleGuardService } from '@services';
 import { Title } from '@angular/platform-browser';
 import { TranslateService } from '@ngx-translate/core';
 import { debounceTime, skip } from 'rxjs';
@@ -42,9 +42,11 @@ export class App implements AfterViewInit {
     private readonly _layoutService = inject(LayoutService);
     private readonly _titleService = inject(Title);
     private readonly _translateService = inject(TranslateService);
+    private readonly _consoleGuardService = inject(ConsoleGuardService);
 
     constructor() {
         this._languageService.init();
+        this._consoleGuardService.init();
     }
 
     ngAfterViewInit(): void {
