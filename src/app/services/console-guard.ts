@@ -25,6 +25,9 @@ export class ConsoleGuardService {
         const bodyStyle = [
             'color: #ffffff',
             'font-size: 12px',
+            'background-color: #ff0033',
+            'padding: 12px',
+            'border-radius: 8px',
         ].join(';');
 
         const linkStyle = [
