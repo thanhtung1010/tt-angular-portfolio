@@ -38,6 +38,21 @@
     </div>
 </section>
 
+<section class="tfe-section" title="MAIN.BUCKET_2026.TITLE">
+    <div class="tfe-timeline_list-wrapper">
+        <ul class="tfe-timeline_list">
+            @for (item of bucketItems2026.items(); let i = $index; track i) {
+                <li class="tfe-timeline_list-item">
+                    <div class="tfe-timeline_list-item-connect" [class]="item.color"></div>
+                    <p class="tfe-timeline_list-item-text">
+                        {{ item.text | translate }}
+                    </p>
+                </li>
+            }
+        </ul>
+    </div>
+</section>
+
 <section class="tfe-section" title="MAIN.INTERESTS.TITLE">
     <interests-map></interests-map>
 </section>
