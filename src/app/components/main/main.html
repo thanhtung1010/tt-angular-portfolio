@@ -1,11 +1,9 @@
-<section class="tfe-section">
-    <h5 class="tfe-section-title">{{ 'MAIN.PHILOSOPHY.TITLE' | translate }}</h5>
+<section class="tfe-section" title="MAIN.PHILOSOPHY.TITLE">
     <p class="tfe-section-paragraph" [innerHTML]="'MAIN.PHILOSOPHY.CONTENT' | translate">
     </p>
 </section>
 
-<section class="tfe-section">
-    <h5 class="tfe-section-title">{{ 'MAIN.PROJECTS.TITLE' | translate }}</h5>
+<section class="tfe-section" title="MAIN.PROJECTS.TITLE">
     <p class="tfe-section-paragraph">
         <url-layout [href]="redocHref()">
             <ng-container hrefContent>
@@ -25,8 +23,7 @@
     </p>
 </section>
 
-<section class="tfe-section">
-    <h5 class="tfe-section-title">{{ 'MAIN.BUCKET.TITLE' | translate }}</h5>
+<section class="tfe-section" title="MAIN.BUCKET.TITLE">
     <div class="tfe-bucket_list-wrapper">
         <ul class="tfe-bucket_list">
             @for (item of bucketItems.items();let i = $index; track i) {
@@ -41,13 +38,11 @@
     </div>
 </section>
 
-<section class="tfe-section">
-    <h5 class="tfe-section-title">{{ 'MAIN.INTERESTS.TITLE' | translate }}</h5>
+<section class="tfe-section" title="MAIN.INTERESTS.TITLE">
     <interests-map></interests-map>
 </section>
 
-<section class="tfe-section">
-    <h5 class="tfe-section-title">{{ 'MAIN.CONTACT.TITLE' | translate }}</h5>
+<section class="tfe-section" title="MAIN.CONTACT.TITLE">
     <p class="tfe-section-paragraph">
         {{ 'MAIN.CONTACT.DESC_1' | translate }}
     </p>

@@ -13,10 +13,23 @@
         }
 
         &-section {
-            @apply relative border-t border-(--border-color) py-5;
+            @apply py-2 md:py-4;
 
             &-title {
-                @apply block w-fit p-2 pr-4 bg-(--bg-color) text-(--text-color-lighter) uppercase font-bold absolute top-0 left-0 right-0 -translate-y-1/2;
+                @apply flex items-center px-2 py-1 hover:bg-gray-200 rounded-xl cursor-pointer transition-colors duration-500 text-nowrap text-(--text-color-lighter) uppercase font-bold;
+            }
+
+            &-title::after {
+                @apply content-[''] inline-block w-full ml-4 border-t border-(--border-color);
+            }
+
+            &-content {
+                @apply transition-all duration-500 overflow-hidden;
+                height: calc-size(fit-content, size);
+            }
+
+            &-content.close {
+                @apply h-0;
             }
 
             &-highlight_title {
@@ -70,7 +83,7 @@
         }
 
         &-footer {
-            @apply max-w-4xl mx-auto lg:pb-6!;
+            @apply max-w-4xl mx-auto lg:pb-6! border-t border-(--border-color) mt-2 md:mt-4;
         }
 
         &-setting {

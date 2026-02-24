@@ -57,6 +57,15 @@
             "ITEM_21": "Go to the Moon.",
             "ITEM_22": "Meet you 🫵."
         },
+        "BUCKET_2026": {
+            "TITLE": "My 2026",
+            "ITEM_1": "IELTS 5.x.",
+            "ITEM_2": "Learn Golang.",
+            "ITEM_3": "Find second remote job.",
+            "ITEM_4": "Trekking Do Quyen Waterfall.",
+            "ITEM_5": "Buy a new Camera.",
+            "ITEM_6": "Buy a new Motorcycle."
+        },
         "INTERESTS": {
             "TITLE": "Interests Map",
             "NODES": {

@@ -1,0 +1,4 @@
+<h5 class="tfe-section-title" (click)="toggleExtend()">{{ title() | translate }}</h5>
+<div class="tfe-section-content" [class.close]="!extend()">
+    <ng-content></ng-content>
+</div>

@@ -57,6 +57,15 @@
             "ITEM_21": "Lên mặt trăng.",
             "ITEM_22": "Gặp bạn 🫵."
         },
+        "BUCKET_2026": {
+            "TITLE": "My 2026",
+            "ITEM_1": "IELTS 5.x.",
+            "ITEM_2": "Học Golang.",
+            "ITEM_3": "Tìm công việc remote thứ 2.",
+            "ITEM_4": "Trekking Thác Đỗ Quyên.",
+            "ITEM_5": "Mua máy ảnh mới.",
+            "ITEM_6": "Mua xe máy mới."
+        },
         "INTERESTS": {
             "TITLE": "Hệ sinh thái cá nhân",
             "NODES": {

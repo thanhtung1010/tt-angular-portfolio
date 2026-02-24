@@ -136,3 +136,42 @@ export const BUCKET_LIST_DATA = arraySignal<IBucketListItem>([
         color: 'text-gray-500',
     },
 ]);
+
+export const BUCKET_LIST_2026 = arraySignal<IBucketListItem>([
+    {
+        text: 'MAIN.BUCKET_2026.ITEM_1',
+        status: BUCKET_LIST_STATUS.IN_PROGRESS,
+        svg: '/assets/svg/check.svg',
+        color: 'text-yellow-500',
+    },
+    {
+        text: 'MAIN.BUCKET_2026.ITEM_2',
+        status: BUCKET_LIST_STATUS.IN_PROGRESS,
+        svg: '/assets/svg/check.svg',
+        color: 'text-yellow-500',
+    },
+    {
+        text: 'MAIN.BUCKET.ITEM_3',
+        status: BUCKET_LIST_STATUS.TODO,
+        svg: '/assets/svg/check.svg',
+        color: 'text-gray-500',
+    },
+    {
+        text: 'MAIN.BUCKET.ITEM_4',
+        status: BUCKET_LIST_STATUS.TODO,
+        svg: '/assets/svg/check.svg',
+        color: 'text-gray-500',
+    },
+    {
+        text: 'MAIN.BUCKET.ITEM_5',
+        status: BUCKET_LIST_STATUS.TODO,
+        svg: '/assets/svg/check.svg',
+        color: 'text-gray-500',
+    },
+    {
+        text: 'MAIN.BUCKET.ITEM_6',
+        status: BUCKET_LIST_STATUS.IN_PROGRESS,
+        svg: '/assets/svg/check.svg',
+        color: 'text-yellow-500',
+    },
+]);
