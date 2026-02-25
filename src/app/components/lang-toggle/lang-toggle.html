@@ -13,33 +13,18 @@
             'bg-[#F0F0F0] right-[53.125%]': !value
         }">
             <div [class]="`w-full h-full rounded-full relative z-0 *:transition-all ${durationCls}`">
-                <span
-                    [innerHTML]="svg.getSvgInnerHTML(start()) | async"
-                    class="flex absolute top-1/2 left-1/2 w-1/2 h-1/2 -translate-y-1/2 -translate-x-1/2 z-3"
-                    [ngClass]="{
-                        'rotate-0': value,
-                        '-rotate-180 opacity-0': !value
-                    }"
-                >
-                </span>
-                <span
-                    [innerHTML]="svg.getSvgInnerHTML(border()) | async"
-                    class="flex absolute top-1/2 left-1/2 w-[95%] h-[95%] -translate-y-1/2 -translate-x-1/2 z-2"
-                    [ngClass]="{
-                        'text-[#DA251D]': value,
-                        'text-[#FFFFFF]': !value
-                    }"
-                >
-                </span>
-                <span
-                    [innerHTML]="svg.getSvgInnerHTML(en()) | async"
-                    class="flex w-full h-full z-1 rotate-0 opacity-100"
-                    [ngClass]="{
-                        'rotate-180 opacity-0': value,
-                        'rotate-0 opacity-100': !value
-                    }"
-                >
-                </span>
+                <svg-loader [name]="start()" size="100%" class="flex absolute top-1/2 left-1/2 w-1/2! h-1/2! -translate-y-1/2 -translate-x-1/2 z-3" [ngClass]="{
+                    'rotate-0': value,
+                    '-rotate-180 opacity-0': !value
+                }"></svg-loader>
+                <svg-loader [name]="border()" size="100%" class="flex absolute top-1/2 left-1/2 w-[95%]! h-[95%]! -translate-y-1/2 -translate-x-1/2 z-2" [ngClass]="{
+                    'text-[#DA251D]': value,
+                    'text-[#FFFFFF]': !value
+                }"></svg-loader>
+                <svg-loader [name]="en()" size="100%" class="flex w-full! h-full! z-1 rotate-0 opacity-100" [ngClass]="{
+                    'rotate-180 opacity-0': value,
+                    'rotate-0 opacity-100': !value
+                }"></svg-loader>
             </div>
         </div>
     </div>

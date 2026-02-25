@@ -12,13 +12,14 @@ import {
     WritableSignal,
 } from '@angular/core';
 import { SvgLoaderService } from '@services';
+import { SvgLoaderComponent } from '../svg-loader/svg-loader';
 
 @Component({
     selector: 'theme-toggle',
     templateUrl: './theme-toggle.html',
     imports: [
         NgClass,
-        AsyncPipe,
+        SvgLoaderComponent,
     ],
 })
 export class ThemeToggleComponent implements OnChanges {
@@ -48,13 +49,13 @@ export class ThemeToggleComponent implements OnChanges {
     private _disabled: WritableSignal<boolean> = signal(false);
     @Output() disabledChange: EventEmitter<boolean> = new EventEmitter();
 
-    protected readonly mdPolygonToggle = signal('/assets/svg/theme-toggle/md-polygon-toggle.svg').asReadonly();
-    protected readonly smPolygonToggle = signal('/assets/svg/theme-toggle/sm-polygon-toggle.svg').asReadonly();
-    protected readonly bgLightToggle = signal('/assets/svg/theme-toggle/bg-light-toggle.svg').asReadonly();
-    protected readonly cloudBlurToggle = signal('/assets/svg/theme-toggle/cloud-blur-toggle.svg').asReadonly();
-    protected readonly cloudLightToggle = signal('/assets/svg/theme-toggle/cloud-light-toggle.svg').asReadonly();
-    protected readonly moonToggle = signal('/assets/svg/theme-toggle/moon-toggle.svg').asReadonly();
-    protected readonly sunToggle = signal('/assets/svg/theme-toggle/sun-toogle.svg').asReadonly();
+    protected readonly mdPolygonToggle = signal('theme-toggle-md-polygon').asReadonly();
+    protected readonly smPolygonToggle = signal('theme-toggle-sm-polygon').asReadonly();
+    protected readonly bgLightToggle = signal('theme-toggle-bg-light').asReadonly();
+    protected readonly cloudBlurToggle = signal('theme-toggle-cloud-blur').asReadonly();
+    protected readonly cloudLightToggle = signal('theme-toggle-cloud-light').asReadonly();
+    protected readonly moonToggle = signal('theme-toggle-moon').asReadonly();
+    protected readonly sunToggle = signal('theme-toggle-sun').asReadonly();
     protected readonly duration: number = 1000;
     protected readonly step: number = 4;
     protected height: number = 5;
@@ -62,8 +63,6 @@ export class ThemeToggleComponent implements OnChanges {
     btnWidth: number = this.width * this.step;
     btnHeight: number = this.height * this.step;
     durationCls: string = `*:duration-500!`;
-
-    protected readonly svg = inject(SvgLoaderService);
 
     constructor() {
         effect(() => {

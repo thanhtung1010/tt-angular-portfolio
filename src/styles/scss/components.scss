@@ -16,7 +16,7 @@
             @apply py-2 md:py-4;
 
             &-title {
-                @apply flex items-center px-2 py-1 hover:bg-gray-200 rounded-xl cursor-pointer transition-colors duration-500 text-nowrap text-(--text-color-lighter) uppercase font-bold;
+                @apply flex items-center px-2 py-1 hover:bg-gray-200 dark:hover:bg-gray-700 rounded-xl cursor-pointer transition-colors duration-500 text-nowrap text-(--text-color-lighter) uppercase font-bold;
             }
 
             &-title::after {

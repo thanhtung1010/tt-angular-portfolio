@@ -6,3 +6,5 @@ export interface IBucketListItem {
     svg: string;
     color: string;
 }
+
+export type IBucketListItem2026 = Omit<IBucketListItem, 'svg'>;

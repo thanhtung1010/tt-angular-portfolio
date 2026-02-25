@@ -1,24 +1,23 @@
-import { AsyncPipe, NgClass } from '@angular/common';
+import { NgClass } from '@angular/common';
 import {
     Component,
     effect,
     EventEmitter,
-    inject,
     Input,
     OnChanges,
     Output,
     signal,
     SimpleChanges,
-    WritableSignal,
+    WritableSignal
 } from '@angular/core';
-import { SvgLoaderService } from '@services';
+import { SvgLoaderComponent } from '../svg-loader/svg-loader';
 
 @Component({
     selector: 'lang-toggle',
     templateUrl: './lang-toggle.html',
     imports: [
         NgClass,
-        AsyncPipe,
+        SvgLoaderComponent,
     ],
 })
 export class LangToggleComponent implements OnChanges {
@@ -48,9 +47,9 @@ export class LangToggleComponent implements OnChanges {
     private _disabled: WritableSignal<boolean> = signal(false);
     @Output() disabledChange: EventEmitter<boolean> = new EventEmitter();
 
-    protected readonly border = signal('/assets/svg/lang-toggle/border.svg').asReadonly();
-    protected readonly start = signal('/assets/svg/lang-toggle/star.svg').asReadonly();
-    protected readonly en = signal('/assets/svg/lang-toggle/en.svg').asReadonly();
+    protected readonly border = signal('lang-toggle-border').asReadonly();
+    protected readonly start = signal('lang-toggle-star').asReadonly();
+    protected readonly en = signal('lang-toggle-en').asReadonly();
     protected readonly duration: number = 1000;
     protected readonly step: number = 4;
     protected height: number = 5;
@@ -58,8 +57,6 @@ export class LangToggleComponent implements OnChanges {
     btnWidth: number = this.width * this.step;
     btnHeight: number = this.height * this.step;
     durationCls: string = `*:duration-500!`;
-
-    protected readonly svg = inject(SvgLoaderService);
 
     constructor() {
         effect(() => {
