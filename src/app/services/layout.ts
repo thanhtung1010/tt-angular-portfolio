@@ -67,12 +67,14 @@ export class LayoutService {
 
     private _initTheme() {
         if (this._isBrowser()) {
-            const theme = this._cookieService.get(COOKIE_THEME) as THEME_ENUM;
-            if (theme) {
-                this.theme$ = theme;
-                this.isThemeDefault.set(theme === THEME_ENUM.LIGHT);
-                this.updateThemeClass(theme);
+            let theme = this._cookieService.get(COOKIE_THEME) as THEME_ENUM;
+            if (!theme) {
+                const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+                theme = prefersDark ? THEME_ENUM.DARK : THEME_ENUM.LIGHT;
             }
+            this.theme$ = theme;
+            this.isThemeDefault.set(theme === THEME_ENUM.LIGHT);
+            this.updateThemeClass(theme);
         }
     }
 
@@ -80,6 +82,10 @@ export class LayoutService {
         this._updateHtmlClass(THEME_ENUM.LIGHT, 'remove');
         this._updateHtmlClass(THEME_ENUM.DARK, 'remove');
         this._updateHtmlClass(theme, 'add');
+
+        if (this._isBrowser()) {
+            document.documentElement.style.colorScheme = theme;
+        }
     }
 
     private _updateBodyClass(cls: string, action: 'add' | 'remove') {
